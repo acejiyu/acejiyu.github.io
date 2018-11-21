@@ -36,7 +36,7 @@
         <link rel="alternate" type="application/atom+xml" title="Acejiyu&#39;s Blog" href="/atom.xml">
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
@@ -202,7 +202,7 @@
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/11/17/hello-world/" target="_blank" rel="external">http://yoursite.com/2018/11/17/hello-world/</a>
+        <a href="/2018/11/17/hello-world/" target="_blank" rel="external">http://yoursite.com/2018/11/17/hello-world/</a>
         
     </div>
     
@@ -277,37 +277,11 @@
     
 
 
-<section class="comments" id="comments">
-    <div id="disqus_thread"></div>
-    <script>
-    var disqus_shortname = 'true';
-    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
 
 
 
 
 
-
-
-<section class="comments" id="comments">
-    <div id="gitment_thread"></div>
-    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
-    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
-    <script>
-        var gitment = new Gitment({
-            owner: '',
-            repo: '',
-            oauth: {
-                client_id: '',
-                client_secret: '',
-            },
-        })
-        gitment.render('comments')
-    </script>
-</section>
 
 
 
@@ -412,7 +386,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 </script>
 
-<script src="/js/main.js"></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -432,7 +406,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 </li>
 </template>
 
-<script src="/js/search.js" async></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
@@ -451,7 +425,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
             document.title = '死鬼去哪里了！';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '(つェ⊂)咦!你来啦!';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);
