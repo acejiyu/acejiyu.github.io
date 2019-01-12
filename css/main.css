@@ -1284,9 +1284,6 @@ pre .javascript .function {
 .use-motion .collection-title {
   opacity: 0;
 }
-.posts-expand {
-  padding-top: 40px;
-}
 @media (max-width: 767px) {
   .posts-expand {
     margin: 0 20px;
@@ -1682,8 +1679,6 @@ pre .javascript .function {
   font-family: UKIJ Ekran;
 }
 .my_post_copyright {
-  width: 85%;
-  max-width: 45em;
   margin: 2.8em auto 0;
   padding: 0.5em 1em;
   border: 1px solid #d3d3d3;
@@ -1901,7 +1896,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffab4e;
+  background: #a2048b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3036,11 +3031,4 @@ ul.breadcrumb li+li:last-child {
   .post-body {
     text-align: justify;
   }
-}
-.post {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 25px;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
-  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
