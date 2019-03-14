@@ -108,29 +108,18 @@
 
 
 
-  <meta name="description" content="postgres 数据库实现定时任务的方式之一是使用pgAgent插件，下面是pgAgent在Windows平台的配置步骤 安装相关软件 安装postgres数据库点此下载  安装pgAgent点此下载，也可以使用pgAdmin自带的安装工具安装 安装成功后，pgAdmin界面会显示pgAgentJobs选项    设置调度任务 创建调度任务     创建调度      创建任务    设置连接数">
-<meta name="keywords" content="postgres,pgAgent">
+  <meta name="description" content="前言闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。 String.intern方法的作用Returns a canonical representation for the string object. A pool of strings, initially empty, is mainta">
+<meta name="keywords" content="String,字符串">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Postgres 配置调度任务">
-<meta property="og:url" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/index.html">
+<meta property="og:title" content="由Java-String.intern引申的思考">
+<meta property="og:url" content="https://acejiyu.github.io/2019/03/14/由Java-String-intern引申的思考/index.html">
 <meta property="og:site_name" content="Acejiyu&#39;s Blog">
-<meta property="og:description" content="postgres 数据库实现定时任务的方式之一是使用pgAgent插件，下面是pgAgent在Windows平台的配置步骤 安装相关软件 安装postgres数据库点此下载  安装pgAgent点此下载，也可以使用pgAdmin自带的安装工具安装 安装成功后，pgAdmin界面会显示pgAgentJobs选项    设置调度任务 创建调度任务     创建调度      创建任务    设置连接数">
+<meta property="og:description" content="前言闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。 String.intern方法的作用Returns a canonical representation for the string object. A pool of strings, initially empty, is mainta">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547642544920.png">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547642907046.png">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547642941160.png">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547643085395.png">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547643095867.png">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547643103115.png">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547643146469.png">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547643155007.png">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547644829747.png">
-<meta property="og:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547644920317.png">
-<meta property="og:updated_time" content="2019-01-16T14:30:53.543Z">
+<meta property="og:updated_time" content="2019-03-14T14:18:29.605Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Postgres 配置调度任务">
-<meta name="twitter:description" content="postgres 数据库实现定时任务的方式之一是使用pgAgent插件，下面是pgAgent在Windows平台的配置步骤 安装相关软件 安装postgres数据库点此下载  安装pgAgent点此下载，也可以使用pgAdmin自带的安装工具安装 安装成功后，pgAdmin界面会显示pgAgentJobs选项    设置调度任务 创建调度任务     创建调度      创建任务    设置连接数">
-<meta name="twitter:image" content="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/1547642544920.png">
+<meta name="twitter:title" content="由Java-String.intern引申的思考">
+<meta name="twitter:description" content="前言闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。 String.intern方法的作用Returns a canonical representation for the string object. A pool of strings, initially empty, is mainta">
 
 
 
@@ -139,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/">
+  <link rel="canonical" href="https://acejiyu.github.io/2019/03/14/由Java-String-intern引申的思考/">
 
 
 
@@ -149,7 +138,7 @@
   };
 </script>
 
-  <title>Postgres 配置调度任务 | Acejiyu's Blog</title>
+  <title>由Java-String.intern引申的思考 | Acejiyu's Blog</title>
   
 
 
@@ -394,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/">
+    <link itemprop="mainEntityOfPage" href="https://acejiyu.github.io/2019/03/14/由Java-String-intern引申的思考/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Acejiyu">
@@ -411,7 +400,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Postgres 配置调度任务
+          <h1 class="post-title" itemprop="name headline">由Java-String.intern引申的思考
               
             
           </h1>
@@ -436,7 +425,7 @@
                 
               
 
-              <time title="创建时间：2019-01-16 21:04:52 / 修改时间：22:30:53" itemprop="dateCreated datePublished" datetime="2019-01-16T21:04:52+08:00">2019-01-16</time>
+              <time title="创建时间：2019-03-14 22:14:49 / 修改时间：22:18:29" itemprop="dateCreated datePublished" datetime="2019-03-14T22:14:49+08:00">2019-03-14</time>
             
 
             
@@ -458,7 +447,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
 
                 
                 
@@ -472,7 +461,7 @@
 
           
           
-             <span id="/2019/01/16/Postgres-配置调度任务/" class="leancloud_visitors" data-flag-title="Postgres 配置调度任务">
+             <span id="/2019/03/14/由Java-String-intern引申的思考/" class="leancloud_visitors" data-flag-title="由Java-String.intern引申的思考">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -503,41 +492,32 @@
       
 
       
-        <p>postgres 数据库实现定时任务的方式之一是使用pgAgent插件，下面是pgAgent在Windows平台的配置步骤</p>
-<h3 id="安装相关软件"><a href="#安装相关软件" class="headerlink" title="安装相关软件"></a>安装相关软件</h3><ol>
-<li><h4 id="安装postgres数据库"><a href="#安装postgres数据库" class="headerlink" title="安装postgres数据库"></a>安装postgres数据库</h4><p><a href="https://www.postgresql.org/download/" target="_blank" rel="noopener">点此下载</a></p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。</p>
+<h3 id="String-intern方法的作用"><a href="#String-intern方法的作用" class="headerlink" title="String.intern方法的作用"></a>String.intern方法的作用</h3><p><em>Returns a canonical representation for the string object. A pool of strings, initially empty, is maintained privately by the class String. When the intern method is invoked, if the pool already contains a string equal to this String object as determined by the equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the pool and a reference to this String object is returned. It follows that for any two strings s and t, s.intern() == t.intern() is true if and only if s.equals(t) is true. All literal strings and string-valued constant expressions are interned. String literals are defined in section 3.10.5 of the The Java? Language Specification.</em></p>
+<p>上面是jdk源码中对intern方法的详细解释。简单来说就是intern用来返回常量池中的某字符串，如果常量池中已经存在该字符串，则直接返回常量池中该对象的引用。否则，在常量池中加入该对象，然后 返回引用。下面的一个例子详细的解释了intern的作用过程:</p>
+<p><em>Now lets understand how Java handles these strings. When you create two string literals:</em></p>
+<p><em>String name1 = “Ram”;</em></p>
+<p><em>String name2 = “Ram”;</em></p>
+<p><em>In this case, JVM searches String constant pool for value “Ram”, and if it does not find it there then it allocates a new memory space and store value “Ram” and return its reference to name1. Similarly, for name2 it checks String constant pool for value “Ram” but this time it find “Ram” there so it does nothing simply return the reference to name2 variable. The way how java handles only one copy of distinct string is called String interning.</em></p>
+<h3 id="String-intern方法的演变"><a href="#String-intern方法的演变" class="headerlink" title="String.intern方法的演变"></a>String.intern方法的演变</h3><p>在jdk1.7之前，字符串常量存储在方法区的PermGen Space。在jdk1.7之后，字符串常量重新被移到了堆中。</p>
+<h3 id="String类的设计思路"><a href="#String类的设计思路" class="headerlink" title="String类的设计思路"></a>String类的设计思路</h3><p>Java中的String被设计成不可变的，出于以下几点考虑：</p>
+<ol>
+<li><p>字符串常量池的需要。字符串常量池的诞生是为了提升效率和减少内存分配。可以说编程的多数时间在处理字符串，而处理的字符串中有很大概率会出现重复的情况。正因为String的不可变性，常量池很容易被管理和优化。</p>
 </li>
-<li><h4 id="安装pgAgent"><a href="#安装pgAgent" class="headerlink" title="安装pgAgent"></a>安装pgAgent</h4><p><a href="https://www.pgadmin.org/download/pgagent-source-code/" target="_blank" rel="noopener">点此下载</a>，也可以使用pgAdmin自带的安装工具安装</p>
-<p>安装成功后，pgAdmin界面会显示<strong>pgAgentJobs</strong>选项</p>
+<li><p>安全性考虑。正因为使用字符串的场景如此之多，所以设计成不可变可以有效的防止字符串被有意或者无意的篡改。从java源码中String的设计中我们不难发现，该类被final修饰，同时所有的属性都被final修饰，在源码中也未暴露任何成员变量的修改方法。（当然如果我们想，通过反射或者Unsafe直接操作内存的手段也可以实现对所谓不可变String的修改）。</p>
+</li>
+<li><p>作为HashMap、HashTable等hash型数据key的必要。因为不可变的设计，jvm底层很容易在缓存String对象的时候缓存其hashcode，这样在执行效率上会大大提升。</p>
 </li>
 </ol>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547642544920.png" alt="1547642544920"></p>
-<h3 id="设置调度任务"><a href="#设置调度任务" class="headerlink" title="设置调度任务"></a>设置调度任务</h3><ol>
-<li><h4 id="创建调度任务"><a href="#创建调度任务" class="headerlink" title="创建调度任务"></a>创建调度任务</h4></li>
+<h3 id="深入讨论"><a href="#深入讨论" class="headerlink" title="深入讨论"></a>深入讨论</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="keyword">new</span> String(<span class="string">"aaa"</span>);</span><br><span class="line">String s2 = <span class="string">"aaa"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> String(<span class="string">"bbb"</span>).intern();</span><br><span class="line">s2 = <span class="string">"bbb"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="string">"ccc"</span>;</span><br><span class="line">s2 = <span class="string">"ccc"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> String(<span class="string">"ddd"</span>).intern();</span><br><span class="line">s2 = <span class="keyword">new</span> String(<span class="string">"ddd"</span>).intern();</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="string">"ab"</span> + <span class="string">"cd"</span>;</span><br><span class="line">s2 = <span class="string">"abcd"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">String temp = <span class="string">"hh"</span>;</span><br><span class="line">s1 = <span class="string">"a"</span> + temp;</span><br><span class="line"><span class="comment">// 如果调用s1.intern 则最终返回true</span></span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">temp = <span class="string">"hh"</span>.intern();</span><br><span class="line">s1 = <span class="string">"a"</span> + temp;</span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">temp = <span class="string">"hh"</span>.intern();</span><br><span class="line">s1 = (<span class="string">"a"</span> + temp).intern();</span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> String(<span class="string">"1"</span>);    <span class="comment">// 同时会生成堆中的对象和常量池中1的对象，但是此时s1指向堆中的对象</span></span><br><span class="line">s1.intern();            <span class="comment">// 常量池中的已经存在</span></span><br><span class="line">s2 = <span class="string">"1"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">String s3 = <span class="keyword">new</span> String(<span class="string">"1"</span>) + <span class="keyword">new</span> String(<span class="string">"1"</span>);    <span class="comment">// 此时生成了四个对象：常量池中的"1" + 2个堆中的"1" + s3指向的堆中的对象（注此时常量池不会生成"11"）</span></span><br><span class="line">s3.intern();    <span class="comment">// jdk1.7之后，常量池不仅仅可以存储对象，还可以存储对象的引用，会直接将s3的地址存储在常量池</span></span><br><span class="line">String s4 = <span class="string">"11"</span>;    <span class="comment">// jdk1.7之后，常量池中的地址其实就是s3的地址</span></span><br><span class="line">System.out.println(s3 == s4); <span class="comment">// jdk1.7之前false， jdk1.7之后true</span></span><br><span class="line"></span><br><span class="line">s3 = <span class="keyword">new</span> String(<span class="string">"2"</span>) + <span class="keyword">new</span> String(<span class="string">"2"</span>);</span><br><span class="line">s4 = <span class="string">"22"</span>;        <span class="comment">// 常量池中不存在22，所以会新开辟一个存储22对象的常量池地址</span></span><br><span class="line">s3.intern();    <span class="comment">// 常量池22的地址和s3的地址不同</span></span><br><span class="line">System.out.println(s3 == s4); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p> 对于什么时候会在常量池存储字符串对象，我想我们可以基本得出结论:</p>
+<ol>
+<li>显示调用String的intern方法的时候;</li>
+<li>直接声明字符串字面常量的时候，例如: <code>String a = &quot;aaa&quot;;</code>。</li>
+<li>字符串直接常量相加的时候，例如: <code>String c = &quot;aa&quot; + &quot;bb&quot;;</code>其中的aa/bb只要有任何一个不是字符串字面常量形式，都不会在常量池生成”aabb”. 且此时jvm做了优化，不会同时生成”aa”和”bb”在字符串常量池中。</li>
 </ol>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547642907046.png" alt="1547642907046"></p>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547642941160.png" alt="1547642941160"></p>
-<ol start="2">
-<li><h4 id="创建调度"><a href="#创建调度" class="headerlink" title="创建调度"></a>创建调度</h4></li>
-</ol>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547643085395.png" alt="1547643085395"></p>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547643095867.png" alt="1547643095867"></p>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547643103115.png" alt="1547643103115"></p>
-<ol start="3">
-<li><h4 id="创建任务"><a href="#创建任务" class="headerlink" title="创建任务"></a>创建任务</h4></li>
-</ol>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547643146469.png" alt="1547643146469"></p>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547643155007.png" alt="1547643155007"></p>
-<p>设置连接数据库必要的参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">host=localhost #数据库地址</span><br><span class="line">port=5432 #数据库端口</span><br><span class="line">dbname=demodb #数据库名</span><br><span class="line">user=postgres #数据库用户名</span><br><span class="line">password=000000	#数据库密码</span><br><span class="line">connect_timeout=10 #超时时间</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547644829747.png" alt="1547644829747"></p>
-<p>输入任务定时执行的SQL语句</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> demot <span class="keyword">VALUES</span>(<span class="string">'test'</span>)</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li><h4 id="查看执行履历"><a href="#查看执行履历" class="headerlink" title="查看执行履历"></a>查看执行履历</h4></li>
-</ol>
-<p><img src="/2019/01/16/Postgres-配置调度任务/1547644920317.png" alt="1547644920317"></p>
-
+<h3 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Integer[] DB_DATA = <span class="keyword">new</span> Integer[<span class="number">10</span>];</span><br><span class="line">Random random = <span class="keyword">new</span> Random(<span class="number">10</span> * <span class="number">10000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; DB_DATA.length; i++) &#123;</span><br><span class="line">    DB_DATA[i] = random.nextInt();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">long</span> t = System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; MAX; i++) &#123;</span><br><span class="line">    arr[i] = <span class="keyword">new</span> String(String.valueOf(DB_DATA[i % DB_DATA.length])); <span class="comment">// 每次都要new一个对象</span></span><br><span class="line">    <span class="comment">// arr[i] = new String(String.valueOf(DB_DATA[i % DB_DATA.length])).intern(); // 其实虽然这么多字符串，但是类型最多为10个，大部分重复的字符串,大大减少内存</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">System.out.println((System.currentTimeMillis() - t) + <span class="string">"ms"</span>);</span><br><span class="line">System.gc();</span><br></pre></td></tr></table></figure>
+<h6 id="引自-https-www-cnblogs-com-Kidezyq-p-8040338-html"><a href="#引自-https-www-cnblogs-com-Kidezyq-p-8040338-html" class="headerlink" title="引自 https://www.cnblogs.com/Kidezyq/p/8040338.html"></a>引自 <a href="https://www.cnblogs.com/Kidezyq/p/8040338.html" target="_blank" rel="noopener">https://www.cnblogs.com/Kidezyq/p/8040338.html</a></h6>
       
     </div>
 
@@ -556,15 +536,15 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/01/16/Postgres-配置调度任务/">Postgres 配置调度任务</a></p>
+  <p><span>本文标题:</span><a href="/2019/03/14/由Java-String-intern引申的思考/">由Java-String.intern引申的思考</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Acejiyu 的个人博客">Acejiyu</a></p>
-  <p><span>原始链接:</span><a href="/2019/01/16/Postgres-配置调度任务/" title="Postgres 配置调度任务">https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://acejiyu.github.io/2019/01/16/Postgres-配置调度任务/" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/2019/03/14/由Java-String-intern引申的思考/" title="由Java-String.intern引申的思考">https://acejiyu.github.io/2019/03/14/由Java-String-intern引申的思考/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://acejiyu.github.io/2019/03/14/由Java-String-intern引申的思考/" aria-label="复制成功！"></i></span>
   </p>
     <!-- <p>
-    <span>发布时间:</span>2019-01-16 21:01
+    <span>发布时间:</span>2019-03-14 22:03
     |
-    <span>最后更新:</span>2019-01-16 22:01
+    <span>最后更新:</span>2019-03-14 22:03
   </p> -->
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -599,9 +579,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/postgres/" rel="tag"># postgres</a>
+            <a href="/tags/String/" rel="tag"># String</a>
           
-            <a href="/tags/pgAgent/" rel="tag"># pgAgent</a>
+            <a href="/tags/字符串/" rel="tag"># 字符串</a>
           
         </div>
       
@@ -614,8 +594,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/17/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/01/16/Postgres-配置调度任务/" rel="next" title="Postgres 配置调度任务">
+                <i class="fa fa-chevron-left"></i> Postgres 配置调度任务
               </a>
             
           </div>
@@ -623,10 +603,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/14/由Java-String-intern引申的思考/" rel="prev" title="由Java-String.intern引申的思考">
-                由Java-String.intern引申的思考 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -820,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装相关软件"><span class="nav-number">1.</span> <span class="nav-text">安装相关软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装postgres数据库"><span class="nav-number">1.1.</span> <span class="nav-text">安装postgres数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装pgAgent"><span class="nav-number">1.2.</span> <span class="nav-text">安装pgAgent</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置调度任务"><span class="nav-number">2.</span> <span class="nav-text">设置调度任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建调度任务"><span class="nav-number">2.1.</span> <span class="nav-text">创建调度任务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建调度"><span class="nav-number">2.2.</span> <span class="nav-text">创建调度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建任务"><span class="nav-number">2.3.</span> <span class="nav-text">创建任务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看执行履历"><span class="nav-number">2.4.</span> <span class="nav-text">查看执行履历</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-intern方法的作用"><span class="nav-number">2.</span> <span class="nav-text">String.intern方法的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-intern方法的演变"><span class="nav-number">3.</span> <span class="nav-text">String.intern方法的演变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String类的设计思路"><span class="nav-number">4.</span> <span class="nav-text">String类的设计思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深入讨论"><span class="nav-number">5.</span> <span class="nav-text">深入讨论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用实例"><span class="nav-number">6.</span> <span class="nav-text">应用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#引自-https-www-cnblogs-com-Kidezyq-p-8040338-html"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">引自 https://www.cnblogs.com/Kidezyq/p/8040338.html</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -980,7 +956,7 @@
   
     <script type="text/javascript">
       window.livereOptions = {
-        refer: '2019/01/16/Postgres-配置调度任务/'
+        refer: '2019/03/14/由Java-String-intern引申的思考/'
       };
       (function(d, s) {
         var j, e = d.getElementsByTagName(s)[0];
