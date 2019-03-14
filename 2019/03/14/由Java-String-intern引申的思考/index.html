@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="Acejiyu&#39;s Blog">
 <meta property="og:description" content="前言闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。 String.intern方法的作用Returns a canonical representation for the string object. A pool of strings, initially empty, is mainta">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-14T14:18:29.605Z">
+<meta property="og:updated_time" content="2019-03-14T14:30:16.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="由Java-String.intern引申的思考">
 <meta name="twitter:description" content="前言闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。 String.intern方法的作用Returns a canonical representation for the string object. A pool of strings, initially empty, is mainta">
@@ -425,7 +425,7 @@
                 
               
 
-              <time title="创建时间：2019-03-14 22:14:49 / 修改时间：22:18:29" itemprop="dateCreated datePublished" datetime="2019-03-14T22:14:49+08:00">2019-03-14</time>
+              <time title="创建时间：2019-03-14 22:14:49 / 修改时间：22:30:16" itemprop="dateCreated datePublished" datetime="2019-03-14T22:14:49+08:00">2019-03-14</time>
             
 
             
@@ -517,7 +517,8 @@
 <li>字符串直接常量相加的时候，例如: <code>String c = &quot;aa&quot; + &quot;bb&quot;;</code>其中的aa/bb只要有任何一个不是字符串字面常量形式，都不会在常量池生成”aabb”. 且此时jvm做了优化，不会同时生成”aa”和”bb”在字符串常量池中。</li>
 </ol>
 <h3 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Integer[] DB_DATA = <span class="keyword">new</span> Integer[<span class="number">10</span>];</span><br><span class="line">Random random = <span class="keyword">new</span> Random(<span class="number">10</span> * <span class="number">10000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; DB_DATA.length; i++) &#123;</span><br><span class="line">    DB_DATA[i] = random.nextInt();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">long</span> t = System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; MAX; i++) &#123;</span><br><span class="line">    arr[i] = <span class="keyword">new</span> String(String.valueOf(DB_DATA[i % DB_DATA.length])); <span class="comment">// 每次都要new一个对象</span></span><br><span class="line">    <span class="comment">// arr[i] = new String(String.valueOf(DB_DATA[i % DB_DATA.length])).intern(); // 其实虽然这么多字符串，但是类型最多为10个，大部分重复的字符串,大大减少内存</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">System.out.println((System.currentTimeMillis() - t) + <span class="string">"ms"</span>);</span><br><span class="line">System.gc();</span><br></pre></td></tr></table></figure>
-<h6 id="引自-https-www-cnblogs-com-Kidezyq-p-8040338-html"><a href="#引自-https-www-cnblogs-com-Kidezyq-p-8040338-html" class="headerlink" title="引自 https://www.cnblogs.com/Kidezyq/p/8040338.html"></a>引自 <a href="https://www.cnblogs.com/Kidezyq/p/8040338.html" target="_blank" rel="noopener">https://www.cnblogs.com/Kidezyq/p/8040338.html</a></h6>
+<p><strong>部分引自 <a href="https://www.cnblogs.com/Kidezyq/p/8040338.html" target="_blank" rel="noopener">https://www.cnblogs.com/Kidezyq/p/8040338.html</a></strong></p>
+
       
     </div>
 
@@ -796,7 +797,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-intern方法的作用"><span class="nav-number">2.</span> <span class="nav-text">String.intern方法的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-intern方法的演变"><span class="nav-number">3.</span> <span class="nav-text">String.intern方法的演变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String类的设计思路"><span class="nav-number">4.</span> <span class="nav-text">String类的设计思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深入讨论"><span class="nav-number">5.</span> <span class="nav-text">深入讨论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用实例"><span class="nav-number">6.</span> <span class="nav-text">应用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#引自-https-www-cnblogs-com-Kidezyq-p-8040338-html"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">引自 https://www.cnblogs.com/Kidezyq/p/8040338.html</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-intern方法的作用"><span class="nav-number">2.</span> <span class="nav-text">String.intern方法的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-intern方法的演变"><span class="nav-number">3.</span> <span class="nav-text">String.intern方法的演变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String类的设计思路"><span class="nav-number">4.</span> <span class="nav-text">String类的设计思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深入讨论"><span class="nav-number">5.</span> <span class="nav-text">深入讨论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用实例"><span class="nav-number">6.</span> <span class="nav-text">应用实例</span></a></li></ol></div>
             
 
           </div>
