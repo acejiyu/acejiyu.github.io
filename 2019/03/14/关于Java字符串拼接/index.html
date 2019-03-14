@@ -108,16 +108,18 @@
 
 
 
-  <meta name="description" content="Tough times never last, but tough people do.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Acejiyu&#39;s Blog">
-<meta property="og:url" content="https://acejiyu.github.io/tags/String/index.html">
+  <meta name="description" content="前言敲了几行关于字符串拼接代码，看了下字节码，发现跟Thinking in Java中描述的并不相同，随即查了一下资料，发现jdk9之后，对字符串的处理方式做出了一些优化。 代码下面写了一段循环执行字符串拼接的代码 123456789public class StrTest &amp;#123;	public static void main(String[] args) &amp;#123;		for(int">
+<meta name="keywords" content="String,字符串">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Java字符串拼接">
+<meta property="og:url" content="https://acejiyu.github.io/2019/03/14/关于Java字符串拼接/index.html">
 <meta property="og:site_name" content="Acejiyu&#39;s Blog">
-<meta property="og:description" content="Tough times never last, but tough people do.">
+<meta property="og:description" content="前言敲了几行关于字符串拼接代码，看了下字节码，发现跟Thinking in Java中描述的并不相同，随即查了一下资料，发现jdk9之后，对字符串的处理方式做出了一些优化。 代码下面写了一段循环执行字符串拼接的代码 123456789public class StrTest &amp;#123;	public static void main(String[] args) &amp;#123;		for(int">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-14T14:48:13.560Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Acejiyu&#39;s Blog">
-<meta name="twitter:description" content="Tough times never last, but tough people do.">
+<meta name="twitter:title" content="关于Java字符串拼接">
+<meta name="twitter:description" content="前言敲了几行关于字符串拼接代码，看了下字节码，发现跟Thinking in Java中描述的并不相同，随即查了一下资料，发现jdk9之后，对字符串的处理方式做出了一些优化。 代码下面写了一段循环执行字符串拼接的代码 123456789public class StrTest &amp;#123;	public static void main(String[] args) &amp;#123;		for(int">
 
 
 
@@ -126,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="https://acejiyu.github.io/tags/String/">
+  <link rel="canonical" href="https://acejiyu.github.io/2019/03/14/关于Java字符串拼接/">
 
 
 
@@ -136,7 +138,7 @@
   };
 </script>
 
-  <title>标签: String | Acejiyu's Blog</title>
+  <title>关于Java字符串拼接 | Acejiyu's Blog</title>
   
 
 
@@ -185,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -256,7 +258,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -361,108 +363,255 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>String<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://acejiyu.github.io/2019/03/14/关于Java字符串拼接/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Acejiyu">
+      <meta itemprop="description" content="Tough times never last, but tough people do.">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Acejiyu's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/14/关于Java字符串拼接/" itemprop="url">
-              
-                <span itemprop="name">关于Java字符串拼接</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">关于Java字符串拼接
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-14T22:45:02+08:00" content="2019-03-14">
-          03-14
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-14 22:45:02 / 修改时间：22:48:13" itemprop="dateCreated datePublished" datetime="2019-03-14T22:45:02+08:00">2019-03-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/03/14/关于Java字符串拼接/" class="leancloud_visitors" data-flag-title="关于Java字符串拼接">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/14/由Java-String-intern引申的思考/" itemprop="url">
-              
-                <span itemprop="name">由Java-String.intern引申的思考</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-14T22:14:49+08:00" content="2019-03-14">
-          03-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>敲了几行关于字符串拼接代码，看了下字节码，发现跟Thinking in Java中描述的并不相同，随即查了一下资料，发现jdk9之后，对字符串的处理方式做出了一些优化。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>下面写了一段循环执行字符串拼接的代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StrTest</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;<span class="number">5</span>; i++) &#123;</span><br><span class="line">			String str = <span class="string">"str"</span>;</span><br><span class="line">			String s = <span class="string">"abc"</span> + str + <span class="string">"def"</span>;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="jdk9之后的字节码"><a href="#jdk9之后的字节码" class="headerlink" title="jdk9之后的字节码"></a>jdk9之后的字节码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Compiled from &quot;StrTest.java&quot;</span><br><span class="line">public class StrTest &#123;</span><br><span class="line">  public StrTest();</span><br><span class="line">    Code:</span><br><span class="line">       0: aload_0</span><br><span class="line">       1: invokespecial #1                  // Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span><br><span class="line">       4: return</span><br><span class="line"></span><br><span class="line">  public static void main(java.lang.String[]);</span><br><span class="line">    Code:</span><br><span class="line">       0: iconst_0</span><br><span class="line">       1: istore_1</span><br><span class="line">       2: iload_1</span><br><span class="line">       3: iconst_5</span><br><span class="line">       4: if_icmpge     30</span><br><span class="line">       7: ldc           #2                  // String str</span><br><span class="line">       9: astore_2</span><br><span class="line">      10: aload_2</span><br><span class="line">      11: invokedynamic #3,  0              // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;</span><br><span class="line">      16: astore_3</span><br><span class="line">      17: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;</span><br><span class="line">      20: aload_3</span><br><span class="line">      21: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V</span><br><span class="line">      24: iinc          1, 1</span><br><span class="line">      27: goto          2</span><br><span class="line">      30: return</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Java9之前的字节码"><a href="#Java9之前的字节码" class="headerlink" title="Java9之前的字节码"></a>Java9之前的字节码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Compiled from &quot;StrTest.java&quot;</span><br><span class="line">public class StrTest &#123;</span><br><span class="line">  public StrTest();</span><br><span class="line">    Code:</span><br><span class="line">       0: aload_0</span><br><span class="line">       1: invokespecial #1                  // Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span><br><span class="line">       4: return</span><br><span class="line"></span><br><span class="line">  public static void main(java.lang.String[]);</span><br><span class="line">    Code:</span><br><span class="line">       0: iconst_0</span><br><span class="line">       1: istore_1</span><br><span class="line">       2: iload_1</span><br><span class="line">       3: iconst_5</span><br><span class="line">       4: if_icmpge     48</span><br><span class="line">       7: ldc           #2                  // String str</span><br><span class="line">       9: astore_2</span><br><span class="line">      10: new           #3                  // class java/lang/StringBuilder</span><br><span class="line">      13: dup</span><br><span class="line">      14: invokespecial #4                  // Method java/lang/StringBuilder.&quot;&lt;init&gt;&quot;:()V</span><br><span class="line">      17: ldc           #5                  // String abc</span><br><span class="line">      19: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span><br><span class="line">      22: aload_2</span><br><span class="line">      23: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span><br><span class="line">      26: ldc           #7                  // String def</span><br><span class="line">      28: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span><br><span class="line">      31: invokevirtual #8                  // Method java/lang/StringBuilder.toString:()Ljava/lang/String;</span><br><span class="line">      34: astore_3</span><br><span class="line">      35: getstatic     #9                  // Field java/lang/System.out:Ljava/io/PrintStream;</span><br><span class="line">      38: aload_3</span><br><span class="line">      39: invokevirtual #10                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V</span><br><span class="line">      42: iinc          1, 1</span><br><span class="line">      45: goto          2</span><br><span class="line">      48: return</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3>
       
     </div>
 
+    
+
+    
+    
+    
+
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/03/14/关于Java字符串拼接/">关于Java字符串拼接</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Acejiyu 的个人博客">Acejiyu</a></p>
+  <p><span>原始链接:</span><a href="/2019/03/14/关于Java字符串拼接/" title="关于Java字符串拼接">https://acejiyu.github.io/2019/03/14/关于Java字符串拼接/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://acejiyu.github.io/2019/03/14/关于Java字符串拼接/" aria-label="复制成功！"></i></span>
+  </p>
+    <!-- <p>
+    <span>发布时间:</span>2019-03-14 22:03
+    |
+    <span>最后更新:</span>2019-03-14 22:03
+  </p> -->
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          icon: "success",
+          showConfirmButton: true
+          });
+    });
+    });
+</script>
+
+
+          
+    </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/String/" rel="tag"># String</a>
+          
+            <a href="/tags/字符串/" rel="tag"># 字符串</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/14/由Java-String-intern引申的思考/" rel="next" title="由Java-String.intern引申的思考">
+                <i class="fa fa-chevron-left"></i> 由Java-String.intern引申的思考
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTI0Ny8xNzc5NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -483,8 +632,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -608,6 +766,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jdk9之后的字节码"><span class="nav-number">3.</span> <span class="nav-text">jdk9之后的字节码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java9之前的字节码"><span class="nav-number">4.</span> <span class="nav-text">Java9之前的字节码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续。。。"><span class="nav-number">5.</span> <span class="nav-text">未完待续。。。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -743,6 +917,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
 
   
 
@@ -755,6 +933,20 @@
 
 
 
+  
+    <script type="text/javascript">
+      window.livereOptions = {
+        refer: '2019/03/14/关于Java字符串拼接/'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
@@ -1097,43 +1289,42 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
+            
           }
         })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
     }
     
 
@@ -1153,9 +1344,7 @@
             });
           };
           
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
+          addCount(Counter);
           
         })
     });
