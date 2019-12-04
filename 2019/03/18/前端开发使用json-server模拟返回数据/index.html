@@ -1,150 +1,80 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Acejy'Blog" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.5.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    version: '6.5.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    mediumzoom: true,
+    lazyload: true,
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
   };
 </script>
 
-
-  
-
-
-
-
-  <meta name="description" content="前端开发使用json-server模拟返回数据前言在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。 安装1npm i -g json-server 创">
+  <meta name="description" content="前端开发使用json-server模拟返回数据前言在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。">
 <meta name="keywords" content="模拟数据,JSON,json-server">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端开发使用json-server模拟返回数据">
-<meta property="og:url" content="https://acejiyu.github.io/2019/03/18/前端开发使用json-server模拟返回数据/index.html">
-<meta property="og:site_name" content="Acejiyu&#39;s Blog">
-<meta property="og:description" content="前端开发使用json-server模拟返回数据前言在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。 安装1npm i -g json-server 创">
+<meta property="og:url" content="https:&#x2F;&#x2F;acejiyu.github.io&#x2F;2019&#x2F;03&#x2F;18&#x2F;%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE&#x2F;index.html">
+<meta property="og:site_name" content="Acejy&#39;Blog">
+<meta property="og:description" content="前端开发使用json-server模拟返回数据前言在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-18T12:27:20.884Z">
+<meta property="og:updated_time" content="2019-12-04T13:38:33.746Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端开发使用json-server模拟返回数据">
-<meta name="twitter:description" content="前端开发使用json-server模拟返回数据前言在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。 安装1npm i -g json-server 创">
+
+<link rel="canonical" href="https://acejiyu.github.io/2019/03/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Acejiyu's Blog" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="https://acejiyu.github.io/2019/03/18/前端开发使用json-server模拟返回数据/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
-  <title>前端开发使用json-server模拟返回数据 | Acejiyu's Blog</title>
+  <title>前端开发使用json-server模拟返回数据 | Acejy'Blog</title>
   
-
-
-
-
-
 
 
 
@@ -152,336 +82,201 @@
 
 
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Acejiyu's Blog</span>
+        <span class="site-title">Acejy'Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
+        <p class="site-subtitle">Just do It</p>
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">4</span></a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
 
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
+</div>
+<div class="search-pop-overlay"></div>
 
-
-  
-
-
-
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/acejiyu" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content">
             
 
-          
-          <div id="content" class="content">
-            
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://acejiyu.github.io/2019/03/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/">
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://acejiyu.github.io/2019/03/18/前端开发使用json-server模拟返回数据/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Acejiyu">
-      <meta itemprop="description" content="Tough times never last, but tough people do.">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Ace Jiyu">
+      <meta itemprop="description" content="">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Acejiyu's Blog">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Acejy'Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">前端开发使用json-server模拟返回数据
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          前端开发使用json-server模拟返回数据
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-03-18 20:06:09 / 修改时间：20:27:20" itemprop="dateCreated datePublished" datetime="2019-03-18T20:06:09+08:00">2019-03-18</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2019-03-18 20:06:09" itemprop="dateCreated datePublished" datetime="2019-03-18T20:06:09+00:00">2019-03-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-04 13:38:33" itemprop="dateModified" datetime="2019-12-04T13:38:33+00:00">2019-12-04</time>
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Angular/" itemprop="url" rel="index"><span itemprop="name">Angular</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Angular/" itemprop="url" rel="index">
+                    <span itemprop="name">Angular</span>
+                  </a>
+                </span>
             </span>
-          
 
           
-            
-          
-
-          
-          
-             <span id="/2019/03/18/前端开发使用json-server模拟返回数据/" class="leancloud_visitors" data-flag-title="前端开发使用json-server模拟返回数据">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
 
         </div>
       </header>
-    
 
     
     
@@ -489,386 +284,305 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+        <h2 id="前端开发使用json-server模拟返回数据"><a href="#前端开发使用json-server模拟返回数据" class="headerlink" title="前端开发使用json-server模拟返回数据"></a>前端开发使用json-server模拟返回数据</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。</p><a id="more"></a>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g json-server</span><br></pre></td></tr></tbody></table></figure>
 
-      
-        <h2 id="前端开发使用json-server模拟返回数据"><a href="#前端开发使用json-server模拟返回数据" class="headerlink" title="前端开发使用json-server模拟返回数据"></a>前端开发使用json-server模拟返回数据</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g json-server</span><br></pre></td></tr></table></figure>
-<h3 id="创建json数据库"><a href="#创建json数据库" class="headerlink" title="创建json数据库"></a>创建json数据库</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"posts"</span>: [</span><br><span class="line">    &#123; <span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"title"</span>: <span class="string">"json-server"</span>, <span class="attr">"author"</span>: <span class="string">"typicode"</span> &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"comments"</span>: [</span><br><span class="line">    &#123; <span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"body"</span>: <span class="string">"some comment1"</span>, <span class="attr">"author"</span>: &#123; <span class="attr">"name"</span>: <span class="string">"typicode1"</span>, <span class="attr">"age"</span>: <span class="number">10</span> &#125;,<span class="attr">"postId"</span>: <span class="number">1</span> &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"profile"</span>: &#123; <span class="attr">"name"</span>: <span class="string">"typicode"</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="创建json数据库"><a href="#创建json数据库" class="headerlink" title="创建json数据库"></a>创建json数据库</h3><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">&nbsp; <span class="attr">"posts"</span>: [</span><br><span class="line">&nbsp; &nbsp; { <span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"title"</span>: <span class="string">"json-server"</span>, <span class="attr">"author"</span>: <span class="string">"typicode"</span> }</span><br><span class="line">&nbsp; ],</span><br><span class="line">&nbsp; <span class="attr">"comments"</span>: [</span><br><span class="line">&nbsp; &nbsp; { <span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"body"</span>: <span class="string">"some comment1"</span>, <span class="attr">"author"</span>: { <span class="attr">"name"</span>: <span class="string">"typicode1"</span>, <span class="attr">"age"</span>: <span class="number">10</span> },<span class="attr">"postId"</span>: <span class="number">1</span> }</span><br><span class="line">&nbsp; ],</span><br><span class="line">&nbsp; <span class="attr">"profile"</span>: { <span class="attr">"name"</span>: <span class="string">"typicode"</span> }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
 <h3 id="启动json-server服务"><a href="#启动json-server服务" class="headerlink" title="启动json-server服务"></a>启动json-server服务</h3><ol>
 <li><p>启动本地服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> json-server --w db.json</span></span><br><span class="line"></span><br><span class="line">  \&#123;^_^&#125;/ hi!</span><br><span class="line"></span><br><span class="line">  Loading db.json</span><br><span class="line">  Done</span><br><span class="line"></span><br><span class="line">  Resources</span><br><span class="line">  http://localhost:3000/todos</span><br><span class="line"></span><br><span class="line">  Home</span><br><span class="line">  http://localhost:3000</span><br><span class="line"></span><br><span class="line">  Type s + enter at any time to create a snapshot of the database</span><br><span class="line">  Watching...</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> json-server --w db.json</span></span><br><span class="line"></span><br><span class="line">  \{^_^}/ hi!</span><br><span class="line"></span><br><span class="line">  Loading db.json</span><br><span class="line">  Done</span><br><span class="line"></span><br><span class="line">  Resources</span><br><span class="line">  http://localhost:3000/todos</span><br><span class="line"></span><br><span class="line">  Home</span><br><span class="line">  http://localhost:3000</span><br><span class="line"></span><br><span class="line">  Type s + enter at any time to create a snapshot of the database</span><br><span class="line">  Watching...</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>启动远程服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> json-server http://example.com/file.json</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> json-server http://jsonplaceholder.typicode.com/db</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> json-server http://example.com/file.json</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> json-server http://jsonplaceholder.typicode.com/db</span></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>在package.json 中添加指令</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "json-server": "json-server --watch db.json",</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"scripts": {</span><br><span class="line">  "json-server": "json-server --watch db.json",</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>设置服务端口</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">json-server --watch db.json --port 3004</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">json-server --watch db.json --port 3004</span><br></pre></td></tr></tbody></table></figure>
+
+
+
 </li>
 </ol>
-<h3 id="配置environment-ts"><a href="#配置environment-ts" class="headerlink" title="配置environment.ts"></a>配置environment.ts</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">src/environments/environment.ts      # 开发环境</span><br><span class="line">src/environments/environment.prod.ts.  # 上线环境</span><br></pre></td></tr></table></figure>
+<h3 id="配置environment-ts"><a href="#配置environment-ts" class="headerlink" title="配置environment.ts"></a>配置environment.ts</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">src/environments/environment.ts      # 开发环境</span><br><span class="line">src/environments/environment.prod.ts.  # 上线环境</span><br></pre></td></tr></tbody></table></figure>
+
 <p>apiUrl设置为json-server的服务地址</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> environment = &#123;</span><br><span class="line">  production: <span class="literal">false</span>,</span><br><span class="line">  apiUrl: <span class="string">'http://localhost:3000'</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> environment = {</span><br><span class="line">  production: <span class="literal">false</span>,</span><br><span class="line">  apiUrl: <span class="string">'http://localhost:3000'</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
 <p>也可直接使用json-server服务的URL</p>
-<h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> API_URL = environment.apiUrl;</span><br><span class="line">...</span><br><span class="line">http.get(API_URL + <span class="string">"posts"</span>)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> API_URL = environment.apiUrl;</span><br><span class="line">...</span><br><span class="line">http.get(API_URL + <span class="string">"posts"</span>)</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
+
 <h3 id="json-server提供的请求方式"><a href="#json-server提供的请求方式" class="headerlink" title="json-server提供的请求方式"></a>json-server提供的请求方式</h3><p>GET、POST、PUT、DELETE、PATCH、OPTIONS</p>
 <p>注：POST\PUT\PATCH请求需要设置请求头Content-type: application/json</p>
 <ol>
 <li><p>基础请求方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GET    /posts</span><br><span class="line">GET    /posts/:id</span><br><span class="line">POST   /posts</span><br><span class="line">PUT    /posts/:id</span><br><span class="line">PATCH  /posts/:id</span><br><span class="line">DELETE /posts/:id</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GET    /posts</span><br><span class="line">GET    /posts/:id</span><br><span class="line">POST   /posts</span><br><span class="line">PUT    /posts/:id</span><br><span class="line">PATCH  /posts/:id</span><br><span class="line">DELETE /posts/:id</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>获取json数据库中所有数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /db</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /db</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>带参数查找请求方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /posts?title=json-server&amp;author=typicode</span><br><span class="line">GET /posts?id=1&amp;postid=2</span><br><span class="line">GET /comments?author.name=typicode1  * 使用.访问下级属性值</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /posts?title=json-server&amp;author=typicode</span><br><span class="line">GET /posts?id=1&amp;postid=2</span><br><span class="line">GET /comments?author.name=typicode1  * 使用.访问下级属性值</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>页面分页链接请求（first、last、prev、next）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /posts?_page=7</span><br><span class="line">GET /posts?_page=7&amp;_limit=20</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /posts?_page=7</span><br><span class="line">GET /posts?_page=7&amp;_limit=20</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>升降序排列请求</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /users?_sort=id&amp;_order=asc</span><br><span class="line">GET /users?_sort=name&amp;_order=asc</span><br><span class="line">多条件升降序： GET /posts?_sort=user,views&amp;_order=desc,asc</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /users?_sort=id&amp;_order=asc</span><br><span class="line">GET /users?_sort=name&amp;_order=asc</span><br><span class="line">多条件升降序： GET /posts?_sort=user,views&amp;_order=desc,asc</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>范围查询数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /users?_start=2&amp;_end=20 （类似于substring）</span><br><span class="line">GET /users?_start=2&amp;_limit=3    （类似于substr）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /users?_start=2&amp;_end=20 （类似于substring）</span><br><span class="line">GET /users?_start=2&amp;_limit=3    （类似于substr）</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>根据文字模糊匹配查询数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /users?q=情感</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /users?q=情感</span><br></pre></td></tr></tbody></table></figure>
+
 </li>
 </ol>
 <p>另外json-server支持自定义路由等其他功能，详情请参照<a href="https://www.npmjs.com/package/json-server" target="_blank" rel="noopener">官方文档</a></p>
-
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-          
-            
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/03/18/前端开发使用json-server模拟返回数据/">前端开发使用json-server模拟返回数据</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 Acejiyu 的个人博客">Acejiyu</a></p>
-  <p><span>原始链接:</span><a href="/2019/03/18/前端开发使用json-server模拟返回数据/" title="前端开发使用json-server模拟返回数据">https://acejiyu.github.io/2019/03/18/前端开发使用json-server模拟返回数据/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://acejiyu.github.io/2019/03/18/前端开发使用json-server模拟返回数据/" aria-label="复制成功！"></i></span>
-  </p>
-    <!-- <p>
-    <span>发布时间:</span>2019-03-18 20:03
-    |
-    <span>最后更新:</span>2019-03-18 20:03
-  </p> -->
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
-</div>
 <script>
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({
-          title: "",
-          text: '复制成功',
-          icon: "success",
-          showConfirmButton: true
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
           });
-    });
-    });
-</script>
-
-
-          
+      </script>
     </div>
 
     
-
-    
-       
     
     
-
-    
-
-    <footer class="post-footer">
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
       
-        <div class="post-tags">
-          
-            <a href="/tags/模拟数据/" rel="tag"># 模拟数据</a>
-          
-            <a href="/tags/JSON/" rel="tag"># JSON</a>
-          
-            <a href="/tags/json-server/" rel="tag"># json-server</a>
-          
-        </div>
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="Ace Jiyu 微信支付">
+        <p>微信支付</p>
+      </div>
       
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/03/14/关于Java字符串拼接/" rel="next" title="关于Java字符串拼接">
-                <i class="fa fa-chevron-left"></i> 关于Java字符串拼接
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="Ace Jiyu 支付宝">
+        <p>支付宝</p>
+      </div>
 
   </div>
+</div>
 
-
-          </div>
-          
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTI0Ny8xNzc5NQ=="></div>
-    </div>
-
-  
-
-
-
-        </div>
         
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Ace Jiyu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://acejiyu.github.io/2019/03/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/" title="前端开发使用json-server模拟返回数据">https://acejiyu.github.io/前端开发使用json-server模拟返回数据</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <div>
+        
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:16px;">-------------本文结束<i class="fa fa-heart"></i>感谢您的阅读-------------</div>
+    
+</div>
+        
+      </div>
+
+      <footer class="post-footer">
           
+          <div class="post-tags">
+              <a href="/tags/%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 模拟数据</a>
+              <a href="/tags/JSON/" rel="tag"><i class="fa fa-tag"></i> JSON</a>
+              <a href="/tags/json-server/" rel="tag"><i class="fa fa-tag"></i> json-server</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/03/14/%E5%85%B3%E4%BA%8EJava%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/" rel="next" title="关于Java字符串拼接">
+                  <i class="fa fa-chevron-left"></i> 关于Java字符串拼接
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Acejiyu">
-            
-              <p class="site-author-name" itemprop="name">Acejiyu</p>
-              <p class="site-description motion-element" itemprop="description">Tough times never last, but tough people do.</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/acejiyu" title="GitHub &rarr; https://github.com/acejiyu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:acejiyu@gmail.com" title="E-Mail &rarr; mailto:acejiyu@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://weibo.com/xxxx" title="Weibo &rarr; https://weibo.com/xxxx" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端开发使用json-server模拟返回数据"><span class="nav-number">1.</span> <span class="nav-text">前端开发使用json-server模拟返回数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建json数据库"><span class="nav-number">1.3.</span> <span class="nav-text">创建json数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动json-server服务"><span class="nav-number">1.4.</span> <span class="nav-text">启动json-server服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置environment-ts"><span class="nav-number">1.5.</span> <span class="nav-text">配置environment.ts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取数据"><span class="nav-number">1.6.</span> <span class="nav-text">获取数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#json-server提供的请求方式"><span class="nav-number">1.7.</span> <span class="nav-text">json-server提供的请求方式</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端开发使用json-server模拟返回数据"><span class="nav-number">1.</span> <span class="nav-text">前端开发使用json-server模拟返回数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建json数据库"><span class="nav-number">1.3.</span> <span class="nav-text">创建json数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动json-server服务"><span class="nav-number">1.4.</span> <span class="nav-text">启动json-server服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置environment-ts"><span class="nav-number">1.5.</span> <span class="nav-text">配置environment.ts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取数据"><span class="nav-number">1.6.</span> <span class="nav-text">获取数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#json-server提供的请求方式"><span class="nav-number">1.7.</span> <span class="nav-text">json-server提供的请求方式</span></a></li></ol></li></ol></div>
+      </div>
       <!--/noindex-->
-      
 
-      
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ace Jiyu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Ace Jiyu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/acejiyu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;acejiyu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mailto:acejiyu@gmail.com" title="E-Mail → mailto:acejiyu@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Acejiyu</span>
-
-  
-
-  
+  <span class="author" itemprop="copyrightHolder">Ace Jiyu</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">8k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7 分钟</span>
 </div>
 
-
-
-
-
-
-
-
+<div class="run_time" style=" text-align:center;">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/08/2018 08:08:08");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()",250);
+  </script>
+</div>
 
         
+
+
+
+
 
 
 
@@ -880,29 +594,28 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-	
-    
-
-    
   </div>
 
   
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script size="300" alpha="0.5" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
 
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
 
 
 
@@ -917,516 +630,8 @@
 
 
   
-    
-      
-  
-  <script type="text/javascript" color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
 
   
 
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
-
-
-
-  
-
-
-
-  
-    <script type="text/javascript">
-      window.livereOptions = {
-        refer: '2019/03/18/前端开发使用json-server模拟返回数据/'
-      };
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
-
-
-
-
-
-
-
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
-                .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(1);
-                })
-                .fail(function () {
-                  console.log('Failed to create');
-                });
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "Hivj8b1Y4hnhgzGDQluoQRlw-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "Hivj8b1Y4hnhgzGDQluoQRlw-gzGzoHsz",
-                'X-LC-Key': "6hfnYvyIRBmQhmsijhEVwn9U",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"log":false});</script></body>
 </html>
