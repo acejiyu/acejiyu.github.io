@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>私有Repository的配置方法</title>
+    <url>/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。<br>Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料</p><h3 id="npm配置"><a href="#npm配置" class="headerlink" title="npm配置"></a>npm配置</h3><ol>
+<li><p>电脑已经安装node.js，打开cmd控制台，执行以下指令</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">https://registry.npmjs.org/</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>执行以下指令，将仓库地址切换为本地仓库</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config set registry http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>执行以下命令，确认仓库切换成功</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</li>
+</ol><a id="more"></a>
+
+<h3 id="maven配置"><a href="#maven配置" class="headerlink" title="maven配置"></a>maven配置</h3><ol>
+<li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\.m2</code></p>
+</li>
+<li><p>在该目录下创建<code>setting.xml</code>文件，文件内容如下：<br> <a href="settings.zip">点击下载</a> </p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--This sends everything else to /public --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://<span class="tag">&lt;<span class="name">host</span>&gt;</span>:<span class="tag">&lt;<span class="name">port</span>&gt;</span>/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--Enable snapshots for the built in central repo to direct --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--all requests to nexus via the mirror --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>central<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://central<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">releases</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>central<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://central<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">releases</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">activeProfiles</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--make the profile active all the time --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">activeProfile</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">activeProfile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">activeProfiles</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>打开ecilpse，选择以下设置选项：</p>
+<p>Preferences&gt;Maven&gt;User Settings&gt;User Settings&gt;Browser…</p>
+<p>选择&lt;1&gt;中创建的文件，点击<code>Update Settings</code>按钮</p>
+</li>
+<li><p>点击<code>Apply and Close</code>保存退出</p>
+</li>
+<li><p>选择maven项目，<code>Alt+F5</code>确认maven仓库切换成功</p>
+</li>
+</ol>
+<h3 id="bower配置"><a href="#bower配置" class="headerlink" title="bower配置"></a>bower配置</h3><ol>
+<li><p>执行以下命令，安装bower的nexus3依赖组件</p>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm i bower-nexus3-resolver -g</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\</code></p>
+</li>
+<li><p>在该目录下创建<code>.bowerrc</code>文件，文件内容如下：<br> <a href="bowerrc.zip">点击下载</a> </p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line">   {</span><br><span class="line">     <span class="attr">"registry"</span>: {</span><br><span class="line">       <span class="attr">"search"</span>: [</span><br><span class="line">         <span class="string">"http://&lt;host&gt;:&lt;port&gt;/repository/bower-group/"</span></span><br><span class="line">       ]</span><br><span class="line">     },</span><br><span class="line">     <span class="attr">"resolvers"</span>: [</span><br><span class="line">       <span class="string">"bower-nexus3-resolver"</span></span><br><span class="line">     ]</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>nexus</category>
+      </categories>
+      <tags>
+        <tag>私有仓库</tag>
+        <tag>Repository</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端开发使用json-server模拟返回数据</title>
     <url>/2019/03/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/</url>
     <content><![CDATA[<h2 id="前端开发使用json-server模拟返回数据"><a href="#前端开发使用json-server模拟返回数据" class="headerlink" title="前端开发使用json-server模拟返回数据"></a>前端开发使用json-server模拟返回数据</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。</p><a id="more"></a>

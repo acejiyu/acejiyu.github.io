@@ -48,18 +48,18 @@
   };
 </script>
 
-  <meta name="description" content="前言闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。String.intern方法的作用Returns a canonical representation for the string object. A pool of strings, initially empty, is maintai">
-<meta name="keywords" content="String,字符串">
+  <meta name="description" content="前言以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料npm配置 电脑已经安装node.js，打开cmd控制台，执行以下指令 1234npm config get registry#返回当前使用的仓库地址：&amp;gt;https:&#x2F;&#x2F;registry.npmjs.org&#x2F;">
+<meta name="keywords" content="私有仓库,Repository">
 <meta property="og:type" content="article">
-<meta property="og:title" content="由Java-String.intern引申的思考">
-<meta property="og:url" content="https:&#x2F;&#x2F;acejiyu.github.io&#x2F;2019&#x2F;03&#x2F;14&#x2F;%E7%94%B1Java-String-intern%E5%BC%95%E7%94%B3%E7%9A%84%E6%80%9D%E8%80%83&#x2F;index.html">
+<meta property="og:title" content="私有Repository的配置方法">
+<meta property="og:url" content="https:&#x2F;&#x2F;acejiyu.github.io&#x2F;2019&#x2F;09&#x2F;09&#x2F;%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95&#x2F;index.html">
 <meta property="og:site_name" content="Acejy&#39;Blog">
-<meta property="og:description" content="前言闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。String.intern方法的作用Returns a canonical representation for the string object. A pool of strings, initially empty, is maintai">
+<meta property="og:description" content="前言以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料npm配置 电脑已经安装node.js，打开cmd控制台，执行以下指令 1234npm config get registry#返回当前使用的仓库地址：&amp;gt;https:&#x2F;&#x2F;registry.npmjs.org&#x2F;">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-12-05T09:24:47.678Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://acejiyu.github.io/2019/03/14/%E7%94%B1Java-String-intern%E5%BC%95%E7%94%B3%E7%9A%84%E6%80%9D%E8%80%83/">
+<link rel="canonical" href="https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">
 
 
 <script id="page-configurations">
@@ -73,7 +73,7 @@
   };
 </script>
 
-  <title>由Java-String.intern引申的思考 | Acejy'Blog</title>
+  <title>私有Repository的配置方法 | Acejy'Blog</title>
   
 
 
@@ -215,7 +215,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://acejiyu.github.io/2019/03/14/%E7%94%B1Java-String-intern%E5%BC%95%E7%94%B3%E7%9A%84%E6%80%9D%E8%80%83/">
+    <link itemprop="mainEntityOfPage" href="https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -228,7 +228,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          由Java-String.intern引申的思考
+          私有Repository的配置方法
         </h1>
 
         <div class="post-meta">
@@ -238,7 +238,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-03-14 22:14:49" itemprop="dateCreated datePublished" datetime="2019-03-14T22:14:49+00:00">2019-03-14</time>
+              <time title="创建时间：2019-09-09 09:37:22" itemprop="dateCreated datePublished" datetime="2019-09-09T09:37:22+00:00">2019-09-09</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -253,8 +253,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JAVA/" itemprop="url" rel="index">
-                    <span itemprop="name">JAVA</span>
+                  <a href="/categories/nexus/" itemprop="url" rel="index">
+                    <span itemprop="name">nexus</span>
                   </a>
                 </span>
             </span>
@@ -265,14 +265,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.7k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -284,34 +284,49 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。</p><h3 id="String-intern方法的作用"><a href="#String-intern方法的作用" class="headerlink" title="String.intern方法的作用"></a>String.intern方法的作用</h3><p><em>Returns a canonical representation for the string object. A pool of strings, initially empty, is maintained privately by the class String. When the intern method is invoked, if the pool already contains a string equal to this String object as determined by the equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the pool and a reference to this String object is returned. It follows that for any two strings s and t, s.intern() == t.intern() is true if and only if s.equals(t) is true. All literal strings and string-valued constant expressions are interned. String literals are defined in section 3.10.5 of the The Java? Language Specification.</em></p><a id="more"></a>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。<br>Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料</p><h3 id="npm配置"><a href="#npm配置" class="headerlink" title="npm配置"></a>npm配置</h3><ol>
+<li><p>电脑已经安装node.js，打开cmd控制台，执行以下指令</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">https://registry.npmjs.org/</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>执行以下指令，将仓库地址切换为本地仓库</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>执行以下命令，确认仓库切换成功</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>上面是jdk源码中对intern方法的详细解释。简单来说就是intern用来返回常量池中的某字符串，如果常量池中已经存在该字符串，则直接返回常量池中该对象的引用。否则，在常量池中加入该对象，然后 返回引用。下面的一个例子详细的解释了intern的作用过程:</p>
-<p><em>Now lets understand how Java handles these strings. When you create two string literals:</em></p>
-<p><em>String name1 = “Ram”;</em></p>
-<p><em>String name2 = “Ram”;</em></p>
-<p><em>In this case, JVM searches String constant pool for value “Ram”, and if it does not find it there then it allocates a new memory space and store value “Ram” and return its reference to name1. Similarly, for name2 it checks String constant pool for value “Ram” but this time it find “Ram” there so it does nothing simply return the reference to name2 variable. The way how java handles only one copy of distinct string is called String interning.</em></p>
-<h3 id="String-intern方法的演变"><a href="#String-intern方法的演变" class="headerlink" title="String.intern方法的演变"></a>String.intern方法的演变</h3><p>在jdk1.7之前，字符串常量存储在方法区的PermGen Space。在jdk1.7之后，字符串常量重新被移到了堆中。</p>
-<h3 id="String类的设计思路"><a href="#String类的设计思路" class="headerlink" title="String类的设计思路"></a>String类的设计思路</h3><p>Java中的String被设计成不可变的，出于以下几点考虑：</p>
-<ol>
-<li><p>字符串常量池的需要。字符串常量池的诞生是为了提升效率和减少内存分配。可以说编程的多数时间在处理字符串，而处理的字符串中有很大概率会出现重复的情况。正因为String的不可变性，常量池很容易被管理和优化。</p>
+
+
 </li>
-<li><p>安全性考虑。正因为使用字符串的场景如此之多，所以设计成不可变可以有效的防止字符串被有意或者无意的篡改。从java源码中String的设计中我们不难发现，该类被final修饰，同时所有的属性都被final修饰，在源码中也未暴露任何成员变量的修改方法。（当然如果我们想，通过反射或者Unsafe直接操作内存的手段也可以实现对所谓不可变String的修改）。</p>
+</ol><a id="more"></a>
+
+<h3 id="maven配置"><a href="#maven配置" class="headerlink" title="maven配置"></a>maven配置</h3><ol>
+<li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\.m2</code></p>
 </li>
-<li><p>作为HashMap、HashTable等hash型数据key的必要。因为不可变的设计，jvm底层很容易在缓存String对象的时候缓存其hashcode，这样在执行效率上会大大提升。</p>
+<li><p>在该目录下创建<code>setting.xml</code>文件，文件内容如下：<br> <a href="settings.zip">点击下载</a> </p>
+<figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--This sends everything else to /public --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://<span class="tag">&lt;<span class="name">host</span>&gt;</span>:<span class="tag">&lt;<span class="name">port</span>&gt;</span>/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--Enable snapshots for the built in central repo to direct --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--all requests to nexus via the mirror --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>central<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://central<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">releases</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>central<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://central<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">releases</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">activeProfiles</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--make the profile active all the time --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">activeProfile</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">activeProfile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">activeProfiles</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>打开ecilpse，选择以下设置选项：</p>
+<p>Preferences&gt;Maven&gt;User Settings&gt;User Settings&gt;Browser…</p>
+<p>选择&lt;1&gt;中创建的文件，点击<code>Update Settings</code>按钮</p>
+</li>
+<li><p>点击<code>Apply and Close</code>保存退出</p>
+</li>
+<li><p>选择maven项目，<code>Alt+F5</code>确认maven仓库切换成功</p>
 </li>
 </ol>
-<h3 id="深入讨论"><a href="#深入讨论" class="headerlink" title="深入讨论"></a>深入讨论</h3><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="keyword">new</span> String(<span class="string">"aaa"</span>);</span><br><span class="line">String s2 = <span class="string">"aaa"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> String(<span class="string">"bbb"</span>).intern();</span><br><span class="line">s2 = <span class="string">"bbb"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="string">"ccc"</span>;</span><br><span class="line">s2 = <span class="string">"ccc"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> String(<span class="string">"ddd"</span>).intern();</span><br><span class="line">s2 = <span class="keyword">new</span> String(<span class="string">"ddd"</span>).intern();</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="string">"ab"</span> + <span class="string">"cd"</span>;</span><br><span class="line">s2 = <span class="string">"abcd"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">String temp = <span class="string">"hh"</span>;</span><br><span class="line">s1 = <span class="string">"a"</span> + temp;</span><br><span class="line"><span class="comment">// 如果调用s1.intern 则最终返回true</span></span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">temp = <span class="string">"hh"</span>.intern();</span><br><span class="line">s1 = <span class="string">"a"</span> + temp;</span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">temp = <span class="string">"hh"</span>.intern();</span><br><span class="line">s1 = (<span class="string">"a"</span> + temp).intern();</span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> String(<span class="string">"1"</span>);    <span class="comment">// 同时会生成堆中的对象和常量池中1的对象，但是此时s1指向堆中的对象</span></span><br><span class="line">s1.intern();            <span class="comment">// 常量池中的已经存在</span></span><br><span class="line">s2 = <span class="string">"1"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">String s3 = <span class="keyword">new</span> String(<span class="string">"1"</span>) + <span class="keyword">new</span> String(<span class="string">"1"</span>);    <span class="comment">// 此时生成了四个对象：常量池中的"1" + 2个堆中的"1" + s3指向的堆中的对象（注此时常量池不会生成"11"）</span></span><br><span class="line">s3.intern();    <span class="comment">// jdk1.7之后，常量池不仅仅可以存储对象，还可以存储对象的引用，会直接将s3的地址存储在常量池</span></span><br><span class="line">String s4 = <span class="string">"11"</span>;    <span class="comment">// jdk1.7之后，常量池中的地址其实就是s3的地址</span></span><br><span class="line">System.out.println(s3 == s4); <span class="comment">// jdk1.7之前false， jdk1.7之后true</span></span><br><span class="line"></span><br><span class="line">s3 = <span class="keyword">new</span> String(<span class="string">"2"</span>) + <span class="keyword">new</span> String(<span class="string">"2"</span>);</span><br><span class="line">s4 = <span class="string">"22"</span>;        <span class="comment">// 常量池中不存在22，所以会新开辟一个存储22对象的常量池地址</span></span><br><span class="line">s3.intern();    <span class="comment">// 常量池22的地址和s3的地址不同</span></span><br><span class="line">System.out.println(s3 == s4); <span class="comment">// false</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="bower配置"><a href="#bower配置" class="headerlink" title="bower配置"></a>bower配置</h3><ol>
+<li><p>执行以下命令，安装bower的nexus3依赖组件</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i bower-nexus3-resolver -g</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\</code></p>
+</li>
+<li><p>在该目录下创建<code>.bowerrc</code>文件，文件内容如下：<br> <a href="bowerrc.zip">点击下载</a> </p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   {</span><br><span class="line">     <span class="attr">"registry"</span>: {</span><br><span class="line">       <span class="attr">"search"</span>: [</span><br><span class="line">         <span class="string">"http://&lt;host&gt;:&lt;port&gt;/repository/bower-group/"</span></span><br><span class="line">       ]</span><br><span class="line">     },</span><br><span class="line">     <span class="attr">"resolvers"</span>: [</span><br><span class="line">       <span class="string">"bower-nexus3-resolver"</span></span><br><span class="line">     ]</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p> 对于什么时候会在常量池存储字符串对象，我想我们可以基本得出结论:</p>
-<ol>
-<li>显示调用String的intern方法的时候;</li>
-<li>直接声明字符串字面常量的时候，例如: <code>String a = "aaa";</code>。</li>
-<li>字符串直接常量相加的时候，例如: <code>String c = "aa" + "bb";</code>其中的aa/bb只要有任何一个不是字符串字面常量形式，都不会在常量池生成”aabb”. 且此时jvm做了优化，不会同时生成”aa”和”bb”在字符串常量池中。</li>
+
+
+</li>
 </ol>
-<h3 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h3><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Integer[] DB_DATA = <span class="keyword">new</span> Integer[<span class="number">10</span>];</span><br><span class="line">Random random = <span class="keyword">new</span> Random(<span class="number">10</span> * <span class="number">10000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; DB_DATA.length; i++) {</span><br><span class="line">    DB_DATA[i] = random.nextInt();</span><br><span class="line">}</span><br><span class="line"><span class="keyword">long</span> t = System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; MAX; i++) {</span><br><span class="line">    arr[i] = <span class="keyword">new</span> String(String.valueOf(DB_DATA[i % DB_DATA.length])); <span class="comment">// 每次都要new一个对象</span></span><br><span class="line">    <span class="comment">// arr[i] = new String(String.valueOf(DB_DATA[i % DB_DATA.length])).intern(); // 其实虽然这么多字符串，但是类型最多为10个，大部分重复的字符串,大大减少内存</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">System.out.println((System.currentTimeMillis() - t) + <span class="string">"ms"</span>);</span><br><span class="line">System.gc();</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>部分引自 <a href="https://www.cnblogs.com/Kidezyq/p/8040338.html" target="_blank" rel="noopener">https://www.cnblogs.com/Kidezyq/p/8040338.html</a></strong></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -365,7 +380,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://acejiyu.github.io/2019/03/14/%E7%94%B1Java-String-intern%E5%BC%95%E7%94%B3%E7%9A%84%E6%80%9D%E8%80%83/" title="由Java-String.intern引申的思考">https://acejiyu.github.io/由Java-String.intern引申的思考</a>
+    <a href="https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/" title="私有Repository的配置方法">https://acejiyu.github.io/私有Repository的配置方法</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -387,25 +402,22 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/String/" rel="tag"><i class="fa fa-tag"></i> String</a>
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i> 字符串</a>
+              <a href="/tags/%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/" rel="tag"><i class="fa fa-tag"></i> 私有仓库</a>
+              <a href="/tags/Repository/" rel="tag"><i class="fa fa-tag"></i> Repository</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/" rel="next" title="Postgres 配置调度任务">
-                  <i class="fa fa-chevron-left"></i> Postgres 配置调度任务
+                <a href="/2019/03/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/" rel="next" title="前端开发使用json-server模拟返回数据">
+                  <i class="fa fa-chevron-left"></i> 前端开发使用json-server模拟返回数据
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2019/03/14/%E5%85%B3%E4%BA%8EJava%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/" rel="prev" title="关于Java字符串拼接">
-                  关于Java字符串拼接 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
@@ -444,7 +456,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-intern方法的作用"><span class="nav-number">2.</span> <span class="nav-text">String.intern方法的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-intern方法的演变"><span class="nav-number">3.</span> <span class="nav-text">String.intern方法的演变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String类的设计思路"><span class="nav-number">4.</span> <span class="nav-text">String类的设计思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深入讨论"><span class="nav-number">5.</span> <span class="nav-text">深入讨论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用实例"><span class="nav-number">6.</span> <span class="nav-text">应用实例</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm配置"><span class="nav-number">2.</span> <span class="nav-text">npm配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maven配置"><span class="nav-number">3.</span> <span class="nav-text">maven配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bower配置"><span class="nav-number">4.</span> <span class="nav-text">bower配置</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
