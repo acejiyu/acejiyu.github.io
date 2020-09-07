@@ -1273,7 +1273,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #96cd7a;
+  background: #1333ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2996,4 +2996,7 @@ hr {
 .search-popup {
   background-color: rgba(255,255,255,0.8) !important;
   border-radius: 0.5rem !important;
+}
+.post-copyright {
+  font-size: 0.8em;
 }
