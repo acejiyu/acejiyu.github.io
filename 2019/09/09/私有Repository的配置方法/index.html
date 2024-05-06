@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.1.1">
+<meta name="generator" content="Hexo 7.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -30,7 +30,7 @@
 <meta property="og:description" content="前言以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料 npm配置">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-09-09T09:37:22.000Z">
-<meta property="article:modified_time" content="2020-09-07T02:17:09.140Z">
+<meta property="article:modified_time" content="2024-05-06T06:43:49.244Z">
 <meta property="article:author" content="Ace Jiyu">
 <meta property="article:tag" content="私有仓库">
 <meta property="article:tag" content="Repository">
@@ -80,6 +80,8 @@
   </style>
 </noscript>
 
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="Acejy'Blog" type="application/atom+xml">
 </head>
 
@@ -231,7 +233,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-07 02:17:09" itemprop="dateModified" datetime="2020-09-07T02:17:09+00:00">2020-09-07</time>
+                <time title="修改时间：2024-05-06 06:43:49" itemprop="dateModified" datetime="2024-05-06T06:43:49+00:00">2024-05-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -271,17 +273,13 @@
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。<br>Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料</p>
 <h3 id="npm配置"><a href="#npm配置" class="headerlink" title="npm配置"></a>npm配置</h3><ol>
 <li><p>电脑已经安装node.js，打开cmd控制台，执行以下指令</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">https://registry.npmjs.org/</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">https://registry.npmjs.org/</span></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>执行以下指令，将仓库地址切换为本地仓库</p>
 <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>执行以下命令，确认仓库切换成功</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</li>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span></span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
 <h3 id="maven配置"><a href="#maven配置" class="headerlink" title="maven配置"></a>maven配置</h3><ol>
 <li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\.m2</code></p>
@@ -305,31 +303,9 @@
 <li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\</code></p>
 </li>
 <li><p>在该目录下创建<code>.bowerrc</code>文件，文件内容如下：<br> <a href="bowerrc.zip">点击下载</a> </p>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   {</span><br><span class="line">     <span class="attr">"registry"</span>: {</span><br><span class="line">       <span class="attr">"search"</span>: [</span><br><span class="line">         <span class="string">"http://&lt;host&gt;:&lt;port&gt;/repository/bower-group/"</span></span><br><span class="line">       ]</span><br><span class="line">     },</span><br><span class="line">     <span class="attr">"resolvers"</span>: [</span><br><span class="line">       <span class="string">"bower-nexus3-resolver"</span></span><br><span class="line">     ]</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</li>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   <span class="punctuation">{</span></span><br><span class="line">     <span class="attr">"registry"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">       <span class="attr">"search"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">         <span class="string">"http://&lt;host&gt;:&lt;port&gt;/repository/bower-group/"</span></span><br><span class="line">       <span class="punctuation">]</span></span><br><span class="line">     <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">"resolvers"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">       <span class="string">"bower-nexus3-resolver"</span></span><br><span class="line">     <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
     </div>
 
     
@@ -531,7 +507,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -540,7 +516,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">11k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>

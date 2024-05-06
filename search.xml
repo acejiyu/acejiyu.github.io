@@ -11,27 +11,38 @@
 <p>安装成功后，pgAdmin界面会显示<strong>pgAgentJobs</strong>选项</p>
 </li>
 </ol>
-<p><img data-src="1547642544920.png" alt="1547642544920"></p>
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547642544920.png" class="" width="1547642544920">
+
+
+
 <h3 id="设置调度任务"><a href="#设置调度任务" class="headerlink" title="设置调度任务"></a>设置调度任务</h3><ol>
 <li><h4 id="创建调度任务"><a href="#创建调度任务" class="headerlink" title="创建调度任务"></a>创建调度任务</h4></li>
 </ol>
-<p><img data-src="1547642907046.png" alt="1547642907046"></p>
-<p><img data-src="1547642941160.png" alt="1547642941160"></p>
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547642907046.png" class="" width="1547642907046">
+
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547642941160.png" class="" width="1547642941160">
+
 <ol start="2">
 <li><h4 id="创建调度"><a href="#创建调度" class="headerlink" title="创建调度"></a>创建调度</h4></li>
 </ol>
-<p><img data-src="1547643085395.png" alt="1547643085395"></p>
-<p><img data-src="1547643095867.png" alt="1547643095867"></p>
-<p><img data-src="1547643103115.png" alt="1547643103115"></p>
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547643085395.png" class="" width="1547643085395">
+
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547643095867.png" class="" width="1547643095867">
+
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547643103115.png" class="" width="1547643103115">
+
 <ol start="3">
 <li><h4 id="创建任务"><a href="#创建任务" class="headerlink" title="创建任务"></a>创建任务</h4></li>
 </ol>
-<p><img data-src="1547643146469.png" alt="1547643146469"></p>
-<p><img data-src="1547643155007.png" alt="1547643155007"></p>
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547643146469.png" class="" width="1547643146469">
+
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547643155007.png" class="" width="1547643155007">
+
 <p>设置连接数据库必要的参数</p>
 <figure class="highlight properties"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">host</span>=<span class="string">localhost #数据库地址</span></span><br><span class="line"><span class="attr">port</span>=<span class="string">5432 #数据库端口</span></span><br><span class="line"><span class="attr">dbname</span>=<span class="string">demodb #数据库名</span></span><br><span class="line"><span class="attr">user</span>=<span class="string">postgres #数据库用户名</span></span><br><span class="line"><span class="attr">password</span>=<span class="string">000000	#数据库密码</span></span><br><span class="line"><span class="attr">connect_timeout</span>=<span class="string">10 #超时时间</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p><img data-src="1547644829747.png" alt="1547644829747"></p>
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547644829747.png" class="" width="1547644829747">
+
 <p>输入任务定时执行的SQL语句</p>
 <figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> demot <span class="keyword">VALUES</span>(<span class="string">'test'</span>)</span><br></pre></td></tr></tbody></table></figure>
 
@@ -40,26 +51,7 @@
 <ol start="4">
 <li><h4 id="查看执行履历"><a href="#查看执行履历" class="headerlink" title="查看执行履历"></a>查看执行履历</h4></li>
 </ol>
-<p><img data-src="1547644920317.png" alt="1547644920317"></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
+<img data-src="/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/1547644920317.png" class="" width="1547644920317">]]></content>
       <categories>
         <category>数据库</category>
       </categories>
@@ -73,31 +65,13 @@
     <url>/2019/03/14/%E5%85%B3%E4%BA%8EJava%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>敲了几行关于字符串拼接代码，看了下字节码，发现跟Thinking in Java中描述的并不相同，随即查了一下资料，发现jdk9之后，对字符串的处理方式做出了一些优化。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>下面写了一段循环执行字符串拼接的代码</p>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StrTest</span> </span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;<span class="number">5</span>; i++) {</span><br><span class="line">			String str = <span class="string">"str"</span>;</span><br><span class="line">			String s = <span class="string">"abc"</span> + str + <span class="string">"def"</span>;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StrTest</span> {</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> {</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i&lt;<span class="number">5</span>; i++) {</span><br><span class="line">			<span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">"str"</span>;</span><br><span class="line">			<span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">"abc"</span> + str + <span class="string">"def"</span>;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="jdk9之后的字节码"><a href="#jdk9之后的字节码" class="headerlink" title="jdk9之后的字节码"></a>jdk9之后的字节码</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">Compiled from "StrTest.java"</span><br><span class="line">public class StrTest {</span><br><span class="line">  public StrTest();</span><br><span class="line">    Code:</span><br><span class="line">       0: aload_0</span><br><span class="line">       1: invokespecial #1                  // Method java/lang/Object."&lt;init&gt;":()V</span><br><span class="line">       4: return</span><br><span class="line"></span><br><span class="line">  public static void main(java.lang.String[]);</span><br><span class="line">    Code:</span><br><span class="line">       0: iconst_0</span><br><span class="line">       1: istore_1</span><br><span class="line">       2: iload_1</span><br><span class="line">       3: iconst_5</span><br><span class="line">       4: if_icmpge     30</span><br><span class="line">       7: ldc           #2                  // String str</span><br><span class="line">       9: astore_2</span><br><span class="line">      10: aload_2</span><br><span class="line">      11: invokedynamic #3,  0              // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;</span><br><span class="line">      16: astore_3</span><br><span class="line">      17: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;</span><br><span class="line">      20: aload_3</span><br><span class="line">      21: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V</span><br><span class="line">      24: iinc          1, 1</span><br><span class="line">      27: goto          2</span><br><span class="line">      30: return</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="jdk9之后的字节码"><a href="#jdk9之后的字节码" class="headerlink" title="jdk9之后的字节码"></a>jdk9之后的字节码</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Compiled from "StrTest.java"</span><br><span class="line">public class StrTest {</span><br><span class="line">  public StrTest();</span><br><span class="line">    Code:</span><br><span class="line">       0: aload_0</span><br><span class="line">       1: invokespecial #1                  // Method java/lang/Object."&lt;init&gt;":()V</span><br><span class="line">       4: return</span><br><span class="line"></span><br><span class="line">  public static void main(java.lang.String[]);</span><br><span class="line">    Code:</span><br><span class="line">       0: iconst_0</span><br><span class="line">       1: istore_1</span><br><span class="line">       2: iload_1</span><br><span class="line">       3: iconst_5</span><br><span class="line">       4: if_icmpge     30</span><br><span class="line">       7: ldc           #2                  // String str</span><br><span class="line">       9: astore_2</span><br><span class="line">      10: aload_2</span><br><span class="line">      11: invokedynamic #3,  0              // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;</span><br><span class="line">      16: astore_3</span><br><span class="line">      17: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;</span><br><span class="line">      20: aload_3</span><br><span class="line">      21: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V</span><br><span class="line">      24: iinc          1, 1</span><br><span class="line">      27: goto          2</span><br><span class="line">      30: return</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="Java9之前的字节码"><a href="#Java9之前的字节码" class="headerlink" title="Java9之前的字节码"></a>Java9之前的字节码</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">Compiled from "StrTest.java"</span><br><span class="line">public class StrTest {</span><br><span class="line">  public StrTest();</span><br><span class="line">    Code:</span><br><span class="line">       0: aload_0</span><br><span class="line">       1: invokespecial #1                  // Method java/lang/Object."&lt;init&gt;":()V</span><br><span class="line">       4: return</span><br><span class="line"></span><br><span class="line">  public static void main(java.lang.String[]);</span><br><span class="line">    Code:</span><br><span class="line">       0: iconst_0</span><br><span class="line">       1: istore_1</span><br><span class="line">       2: iload_1</span><br><span class="line">       3: iconst_5</span><br><span class="line">       4: if_icmpge     48</span><br><span class="line">       7: ldc           #2                  // String str</span><br><span class="line">       9: astore_2</span><br><span class="line">      10: new           #3                  // class java/lang/StringBuilder</span><br><span class="line">      13: dup</span><br><span class="line">      14: invokespecial #4                  // Method java/lang/StringBuilder."&lt;init&gt;":()V</span><br><span class="line">      17: ldc           #5                  // String abc</span><br><span class="line">      19: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span><br><span class="line">      22: aload_2</span><br><span class="line">      23: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span><br><span class="line">      26: ldc           #7                  // String def</span><br><span class="line">      28: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span><br><span class="line">      31: invokevirtual #8                  // Method java/lang/StringBuilder.toString:()Ljava/lang/String;</span><br><span class="line">      34: astore_3</span><br><span class="line">      35: getstatic     #9                  // Field java/lang/System.out:Ljava/io/PrintStream;</span><br><span class="line">      38: aload_3</span><br><span class="line">      39: invokevirtual #10                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V</span><br><span class="line">      42: iinc          1, 1</span><br><span class="line">      45: goto          2</span><br><span class="line">      48: return</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="Java9之前的字节码"><a href="#Java9之前的字节码" class="headerlink" title="Java9之前的字节码"></a>Java9之前的字节码</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Compiled from "StrTest.java"</span><br><span class="line">public class StrTest {</span><br><span class="line">  public StrTest();</span><br><span class="line">    Code:</span><br><span class="line">       0: aload_0</span><br><span class="line">       1: invokespecial #1                  // Method java/lang/Object."&lt;init&gt;":()V</span><br><span class="line">       4: return</span><br><span class="line"></span><br><span class="line">  public static void main(java.lang.String[]);</span><br><span class="line">    Code:</span><br><span class="line">       0: iconst_0</span><br><span class="line">       1: istore_1</span><br><span class="line">       2: iload_1</span><br><span class="line">       3: iconst_5</span><br><span class="line">       4: if_icmpge     48</span><br><span class="line">       7: ldc           #2                  // String str</span><br><span class="line">       9: astore_2</span><br><span class="line">      10: new           #3                  // class java/lang/StringBuilder</span><br><span class="line">      13: dup</span><br><span class="line">      14: invokespecial #4                  // Method java/lang/StringBuilder."&lt;init&gt;":()V</span><br><span class="line">      17: ldc           #5                  // String abc</span><br><span class="line">      19: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span><br><span class="line">      22: aload_2</span><br><span class="line">      23: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span><br><span class="line">      26: ldc           #7                  // String def</span><br><span class="line">      28: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span><br><span class="line">      31: invokevirtual #8                  // Method java/lang/StringBuilder.toString:()Ljava/lang/String;</span><br><span class="line">      34: astore_3</span><br><span class="line">      35: getstatic     #9                  // Field java/lang/System.out:Ljava/io/PrintStream;</span><br><span class="line">      38: aload_3</span><br><span class="line">      39: invokevirtual #10                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V</span><br><span class="line">      42: iinc          1, 1</span><br><span class="line">      45: goto          2</span><br><span class="line">      48: return</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
+<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3>]]></content>
       <categories>
         <category>JAVA</category>
       </categories>
@@ -112,79 +86,55 @@
     <content><![CDATA[<h2 id="前端开发使用json-server模拟返回数据"><a href="#前端开发使用json-server模拟返回数据" class="headerlink" title="前端开发使用json-server模拟返回数据"></a>前端开发使用json-server模拟返回数据</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm i -g json-server</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="创建json数据库"><a href="#创建json数据库" class="headerlink" title="创建json数据库"></a>创建json数据库</h3><figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line">{</span><br><span class="line">&nbsp; <span class="attr">"posts"</span>: [</span><br><span class="line">&nbsp; &nbsp; { <span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"title"</span>: <span class="string">"json-server"</span>, <span class="attr">"author"</span>: <span class="string">"typicode"</span> }</span><br><span class="line">&nbsp; ],</span><br><span class="line">&nbsp; <span class="attr">"comments"</span>: [</span><br><span class="line">&nbsp; &nbsp; { <span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"body"</span>: <span class="string">"some comment1"</span>, <span class="attr">"author"</span>: { <span class="attr">"name"</span>: <span class="string">"typicode1"</span>, <span class="attr">"age"</span>: <span class="number">10</span> },<span class="attr">"postId"</span>: <span class="number">1</span> }</span><br><span class="line">&nbsp; ],</span><br><span class="line">&nbsp; <span class="attr">"profile"</span>: { <span class="attr">"name"</span>: <span class="string">"typicode"</span> }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="创建json数据库"><a href="#创建json数据库" class="headerlink" title="创建json数据库"></a>创建json数据库</h3><figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">&nbsp; <span class="attr">"posts"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">&nbsp; &nbsp; <span class="punctuation">{</span> <span class="attr">"id"</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span> <span class="attr">"title"</span><span class="punctuation">:</span> <span class="string">"json-server"</span><span class="punctuation">,</span> <span class="attr">"author"</span><span class="punctuation">:</span> <span class="string">"typicode"</span> <span class="punctuation">}</span></span><br><span class="line">&nbsp; <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">&nbsp; <span class="attr">"comments"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">&nbsp; &nbsp; <span class="punctuation">{</span> <span class="attr">"id"</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span> <span class="attr">"body"</span><span class="punctuation">:</span> <span class="string">"some comment1"</span><span class="punctuation">,</span> <span class="attr">"author"</span><span class="punctuation">:</span> <span class="punctuation">{</span> <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"typicode1"</span><span class="punctuation">,</span> <span class="attr">"age"</span><span class="punctuation">:</span> <span class="number">10</span> <span class="punctuation">}</span><span class="punctuation">,</span><span class="attr">"postId"</span><span class="punctuation">:</span> <span class="number">1</span> <span class="punctuation">}</span></span><br><span class="line">&nbsp; <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">&nbsp; <span class="attr">"profile"</span><span class="punctuation">:</span> <span class="punctuation">{</span> <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"typicode"</span> <span class="punctuation">}</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="启动json-server服务"><a href="#启动json-server服务" class="headerlink" title="启动json-server服务"></a>启动json-server服务</h3><ol>
 <li><p>启动本地服务</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> json-server --w db.json</span></span><br><span class="line"></span><br><span class="line">  \{^_^}/ hi!</span><br><span class="line"></span><br><span class="line">  Loading db.json</span><br><span class="line">  Done</span><br><span class="line"></span><br><span class="line">  Resources</span><br><span class="line">  http://localhost:3000/todos</span><br><span class="line"></span><br><span class="line">  Home</span><br><span class="line">  http://localhost:3000</span><br><span class="line"></span><br><span class="line">  Type s + enter at any time to create a snapshot of the database</span><br><span class="line">  Watching...</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">json-server --w db.json</span></span><br><span class="line"></span><br><span class="line">  \{^_^}/ hi!</span><br><span class="line"></span><br><span class="line">  Loading db.json</span><br><span class="line">  Done</span><br><span class="line"></span><br><span class="line">  Resources</span><br><span class="line">  http://localhost:3000/todos</span><br><span class="line"></span><br><span class="line">  Home</span><br><span class="line">  http://localhost:3000</span><br><span class="line"></span><br><span class="line">  Type s + enter at any time to create a snapshot of the database</span><br><span class="line">  Watching...</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>启动远程服务</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> json-server http://example.com/file.json</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> json-server http://jsonplaceholder.typicode.com/db</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">json-server http://example.com/file.json</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">json-server http://jsonplaceholder.typicode.com/db</span></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>在package.json 中添加指令</p>
-<figure class="highlight"><table><tbody><tr><td class="code"><pre><span class="line">"scripts": {</span><br><span class="line">  "json-server": "json-server --watch db.json",</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"scripts"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"json-server"</span><span class="punctuation">:</span> <span class="string">"json-server --watch db.json"</span><span class="punctuation">,</span></span><br><span class="line">    ...</span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>设置服务端口</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">json-server --watch db.json --port 3004</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</li>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">json-server --watch db.json --port 3004</span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
-<h3 id="配置environment-ts"><a href="#配置environment-ts" class="headerlink" title="配置environment.ts"></a>配置environment.ts</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">src/environments/environment.ts      # 开发环境</span><br><span class="line">src/environments/environment.prod.ts.  # 上线环境</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="配置environment-ts"><a href="#配置environment-ts" class="headerlink" title="配置environment.ts"></a>配置environment.ts</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">src/environments/environment.ts      # 开发环境</span><br><span class="line">src/environments/environment.prod.ts.  # 上线环境</span><br></pre></td></tr></tbody></table></figure>
 
 <p>apiUrl设置为json-server的服务地址</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> environment = {</span><br><span class="line">  production: <span class="literal">false</span>,</span><br><span class="line">  apiUrl: <span class="string">'http://localhost:3000'</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight typescript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> environment = {</span><br><span class="line">  <span class="attr">production</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">apiUrl</span>: <span class="string">'http://localhost:3000'</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
 
 <p>也可直接使用json-server服务的URL</p>
-<h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><figure class="highlight typescript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> API_URL = environment.apiUrl;</span><br><span class="line">...</span><br><span class="line">http.get(API_URL + <span class="string">"posts"</span>)</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><figure class="highlight typescript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">API_URL</span> = environment.<span class="property">apiUrl</span>;</span><br><span class="line">...</span><br><span class="line">http.<span class="title function_">get</span>(<span class="variable constant_">API_URL</span> + <span class="string">"posts"</span>)</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="json-server提供的请求方式"><a href="#json-server提供的请求方式" class="headerlink" title="json-server提供的请求方式"></a>json-server提供的请求方式</h3><p>GET、POST、PUT、DELETE、PATCH、OPTIONS</p>
 <p>注：POST\PUT\PATCH请求需要设置请求头Content-type: application/json</p>
 <ol>
 <li><p>基础请求方式</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">GET    /posts</span><br><span class="line">GET    /posts/:id</span><br><span class="line">POST   /posts</span><br><span class="line">PUT    /posts/:id</span><br><span class="line">PATCH  /posts/:id</span><br><span class="line">DELETE /posts/:id</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">GET    /posts</span><br><span class="line">GET    /posts/:id</span><br><span class="line">POST   /posts</span><br><span class="line">PUT    /posts/:id</span><br><span class="line">PATCH  /posts/:id</span><br><span class="line">DELETE /posts/:id</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>获取json数据库中所有数据</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">GET /db</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">GET /db</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>带参数查找请求方式</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">GET /posts?title=json-server&amp;author=typicode</span><br><span class="line">GET /posts?id=1&amp;postid=2</span><br><span class="line">GET /comments?author.name=typicode1  * 使用.访问下级属性值</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">GET /posts?title=json-server&amp;author=typicode</span><br><span class="line">GET /posts?id=1&amp;postid=2</span><br><span class="line">GET /comments?author.name=typicode1  * 使用.访问下级属性值</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>页面分页链接请求（first、last、prev、next）</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">GET /posts?_page=7</span><br><span class="line">GET /posts?_page=7&amp;_limit=20</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">GET /posts?_page=7</span><br><span class="line">GET /posts?_page=7&amp;_limit=20</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>升降序排列请求</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">GET /users?_sort=id&amp;_order=asc</span><br><span class="line">GET /users?_sort=name&amp;_order=asc</span><br><span class="line">多条件升降序： GET /posts?_sort=user,views&amp;_order=desc,asc</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">GET /users?_sort=id&amp;_order=asc</span><br><span class="line">GET /users?_sort=name&amp;_order=asc</span><br><span class="line">多条件升降序： GET /posts?_sort=user,views&amp;_order=desc,asc</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>范围查询数据</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">GET /users?_start=2&amp;_end=20 （类似于substring）</span><br><span class="line">GET /users?_start=2&amp;_limit=3    （类似于substr）</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">GET /users?_start=2&amp;_end=20 （类似于substring）</span><br><span class="line">GET /users?_start=2&amp;_limit=3    （类似于substr）</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>根据文字模糊匹配查询数据</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">GET /users?q=情感</span><br></pre></td></tr></tbody></table></figure>
-
-</li>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">GET /users?q=情感</span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
 <p>另外json-server支持自定义路由等其他功能，详情请参照<a href="https://www.npmjs.com/package/json-server">官方文档</a></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
+]]></content>
       <categories>
         <category>Angular</category>
       </categories>
@@ -214,7 +164,7 @@
 <li><p>作为HashMap、HashTable等hash型数据key的必要。因为不可变的设计，jvm底层很容易在缓存String对象的时候缓存其hashcode，这样在执行效率上会大大提升。</p>
 </li>
 </ol>
-<h3 id="深入讨论"><a href="#深入讨论" class="headerlink" title="深入讨论"></a>深入讨论</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">String s1 = <span class="keyword">new</span> String(<span class="string">"aaa"</span>);</span><br><span class="line">String s2 = <span class="string">"aaa"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> String(<span class="string">"bbb"</span>).intern();</span><br><span class="line">s2 = <span class="string">"bbb"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="string">"ccc"</span>;</span><br><span class="line">s2 = <span class="string">"ccc"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> String(<span class="string">"ddd"</span>).intern();</span><br><span class="line">s2 = <span class="keyword">new</span> String(<span class="string">"ddd"</span>).intern();</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="string">"ab"</span> + <span class="string">"cd"</span>;</span><br><span class="line">s2 = <span class="string">"abcd"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">String temp = <span class="string">"hh"</span>;</span><br><span class="line">s1 = <span class="string">"a"</span> + temp;</span><br><span class="line"><span class="comment">// 如果调用s1.intern 则最终返回true</span></span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">temp = <span class="string">"hh"</span>.intern();</span><br><span class="line">s1 = <span class="string">"a"</span> + temp;</span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">temp = <span class="string">"hh"</span>.intern();</span><br><span class="line">s1 = (<span class="string">"a"</span> + temp).intern();</span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> String(<span class="string">"1"</span>);    <span class="comment">// 同时会生成堆中的对象和常量池中1的对象，但是此时s1指向堆中的对象</span></span><br><span class="line">s1.intern();            <span class="comment">// 常量池中的已经存在</span></span><br><span class="line">s2 = <span class="string">"1"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">String s3 = <span class="keyword">new</span> String(<span class="string">"1"</span>) + <span class="keyword">new</span> String(<span class="string">"1"</span>);    <span class="comment">// 此时生成了四个对象：常量池中的"1" + 2个堆中的"1" + s3指向的堆中的对象（注此时常量池不会生成"11"）</span></span><br><span class="line">s3.intern();    <span class="comment">// jdk1.7之后，常量池不仅仅可以存储对象，还可以存储对象的引用，会直接将s3的地址存储在常量池</span></span><br><span class="line">String s4 = <span class="string">"11"</span>;    <span class="comment">// jdk1.7之后，常量池中的地址其实就是s3的地址</span></span><br><span class="line">System.out.println(s3 == s4); <span class="comment">// jdk1.7之前false， jdk1.7之后true</span></span><br><span class="line"></span><br><span class="line">s3 = <span class="keyword">new</span> String(<span class="string">"2"</span>) + <span class="keyword">new</span> String(<span class="string">"2"</span>);</span><br><span class="line">s4 = <span class="string">"22"</span>;        <span class="comment">// 常量池中不存在22，所以会新开辟一个存储22对象的常量池地址</span></span><br><span class="line">s3.intern();    <span class="comment">// 常量池22的地址和s3的地址不同</span></span><br><span class="line">System.out.println(s3 == s4); <span class="comment">// false</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="深入讨论"><a href="#深入讨论" class="headerlink" title="深入讨论"></a>深入讨论</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">"aaa"</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="string">"aaa"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">"bbb"</span>).intern();</span><br><span class="line">s2 = <span class="string">"bbb"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="string">"ccc"</span>;</span><br><span class="line">s2 = <span class="string">"ccc"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">"ddd"</span>).intern();</span><br><span class="line">s2 = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">"ddd"</span>).intern();</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="string">"ab"</span> + <span class="string">"cd"</span>;</span><br><span class="line">s2 = <span class="string">"abcd"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="string">"hh"</span>;</span><br><span class="line">s1 = <span class="string">"a"</span> + temp;</span><br><span class="line"><span class="comment">// 如果调用s1.intern 则最终返回true</span></span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">temp = <span class="string">"hh"</span>.intern();</span><br><span class="line">s1 = <span class="string">"a"</span> + temp;</span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">temp = <span class="string">"hh"</span>.intern();</span><br><span class="line">s1 = (<span class="string">"a"</span> + temp).intern();</span><br><span class="line">s2 = <span class="string">"ahh"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">s1 = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">"1"</span>);    <span class="comment">// 同时会生成堆中的对象和常量池中1的对象，但是此时s1指向堆中的对象</span></span><br><span class="line">s1.intern();            <span class="comment">// 常量池中的已经存在</span></span><br><span class="line">s2 = <span class="string">"1"</span>;</span><br><span class="line">System.out.println(s1 == s2);    <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">"1"</span>) + <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">"1"</span>);    <span class="comment">// 此时生成了四个对象：常量池中的"1" + 2个堆中的"1" + s3指向的堆中的对象（注此时常量池不会生成"11"）</span></span><br><span class="line">s3.intern();    <span class="comment">// jdk1.7之后，常量池不仅仅可以存储对象，还可以存储对象的引用，会直接将s3的地址存储在常量池</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s4</span> <span class="operator">=</span> <span class="string">"11"</span>;    <span class="comment">// jdk1.7之后，常量池中的地址其实就是s3的地址</span></span><br><span class="line">System.out.println(s3 == s4); <span class="comment">// jdk1.7之前false， jdk1.7之后true</span></span><br><span class="line"></span><br><span class="line">s3 = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">"2"</span>) + <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">"2"</span>);</span><br><span class="line">s4 = <span class="string">"22"</span>;        <span class="comment">// 常量池中不存在22，所以会新开辟一个存储22对象的常量池地址</span></span><br><span class="line">s3.intern();    <span class="comment">// 常量池22的地址和s3的地址不同</span></span><br><span class="line">System.out.println(s3 == s4); <span class="comment">// false</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p> 对于什么时候会在常量池存储字符串对象，我想我们可以基本得出结论:</p>
 <ol>
@@ -222,28 +172,10 @@
 <li>直接声明字符串字面常量的时候，例如: <code>String a = "aaa";</code>。</li>
 <li>字符串直接常量相加的时候，例如: <code>String c = "aa" + "bb";  </code>其中的aa/bb只要有任何一个不是字符串字面常量形式，都不会在常量池生成”aabb”. 且此时jvm做了优化，不会同时生成”aa”和”bb”在字符串常量池中。</li>
 </ol>
-<h3 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">Integer[] DB_DATA = <span class="keyword">new</span> Integer[<span class="number">10</span>];</span><br><span class="line">Random random = <span class="keyword">new</span> Random(<span class="number">10</span> * <span class="number">10000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; DB_DATA.length; i++) {</span><br><span class="line">    DB_DATA[i] = random.nextInt();</span><br><span class="line">}</span><br><span class="line"><span class="keyword">long</span> t = System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; MAX; i++) {</span><br><span class="line">    arr[i] = <span class="keyword">new</span> String(String.valueOf(DB_DATA[i % DB_DATA.length])); <span class="comment">// 每次都要new一个对象</span></span><br><span class="line">    <span class="comment">// arr[i] = new String(String.valueOf(DB_DATA[i % DB_DATA.length])).intern(); // 其实虽然这么多字符串，但是类型最多为10个，大部分重复的字符串,大大减少内存</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">System.out.println((System.currentTimeMillis() - t) + <span class="string">"ms"</span>);</span><br><span class="line">System.gc();</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">Integer[] DB_DATA = <span class="keyword">new</span> <span class="title class_">Integer</span>[<span class="number">10</span>];</span><br><span class="line"><span class="type">Random</span> <span class="variable">random</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Random</span>(<span class="number">10</span> * <span class="number">10000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; DB_DATA.length; i++) {</span><br><span class="line">    DB_DATA[i] = random.nextInt();</span><br><span class="line">}</span><br><span class="line"><span class="type">long</span> <span class="variable">t</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; MAX; i++) {</span><br><span class="line">    arr[i] = <span class="keyword">new</span> <span class="title class_">String</span>(String.valueOf(DB_DATA[i % DB_DATA.length])); <span class="comment">// 每次都要new一个对象</span></span><br><span class="line">    <span class="comment">// arr[i] = new String(String.valueOf(DB_DATA[i % DB_DATA.length])).intern(); // 其实虽然这么多字符串，但是类型最多为10个，大部分重复的字符串,大大减少内存</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">System.out.println((System.currentTimeMillis() - t) + <span class="string">"ms"</span>);</span><br><span class="line">System.gc();</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>部分引自 <a href="https://www.cnblogs.com/Kidezyq/p/8040338.html">https://www.cnblogs.com/Kidezyq/p/8040338.html</a></strong></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
+]]></content>
       <categories>
         <category>JAVA</category>
       </categories>
@@ -258,17 +190,13 @@
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。<br>Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料</p>
 <h3 id="npm配置"><a href="#npm配置" class="headerlink" title="npm配置"></a>npm配置</h3><ol>
 <li><p>电脑已经安装node.js，打开cmd控制台，执行以下指令</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">https://registry.npmjs.org/</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">https://registry.npmjs.org/</span></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>执行以下指令，将仓库地址切换为本地仓库</p>
 <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config set registry http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>执行以下命令，确认仓库切换成功</p>
-<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</li>
+<figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span></span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
 <h3 id="maven配置"><a href="#maven配置" class="headerlink" title="maven配置"></a>maven配置</h3><ol>
 <li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\.m2</code></p>
@@ -292,31 +220,9 @@
 <li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\</code></p>
 </li>
 <li><p>在该目录下创建<code>.bowerrc</code>文件，文件内容如下：<br> <a href="bowerrc.zip">点击下载</a> </p>
-<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line">   {</span><br><span class="line">     <span class="attr">"registry"</span>: {</span><br><span class="line">       <span class="attr">"search"</span>: [</span><br><span class="line">         <span class="string">"http://&lt;host&gt;:&lt;port&gt;/repository/bower-group/"</span></span><br><span class="line">       ]</span><br><span class="line">     },</span><br><span class="line">     <span class="attr">"resolvers"</span>: [</span><br><span class="line">       <span class="string">"bower-nexus3-resolver"</span></span><br><span class="line">     ]</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</li>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line">   <span class="punctuation">{</span></span><br><span class="line">     <span class="attr">"registry"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">       <span class="attr">"search"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">         <span class="string">"http://&lt;host&gt;:&lt;port&gt;/repository/bower-group/"</span></span><br><span class="line">       <span class="punctuation">]</span></span><br><span class="line">     <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">"resolvers"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">       <span class="string">"bower-nexus3-resolver"</span></span><br><span class="line">     <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
+]]></content>
       <categories>
         <category>nexus</category>
       </categories>

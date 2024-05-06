@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.1.1">
+<meta name="generator" content="Hexo 7.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -30,7 +30,7 @@
 <meta property="og:description" content="前端开发使用json-server模拟返回数据前言在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-03-18T20:06:09.000Z">
-<meta property="article:modified_time" content="2020-09-07T02:17:09.140Z">
+<meta property="article:modified_time" content="2024-05-06T06:43:49.244Z">
 <meta property="article:author" content="Ace Jiyu">
 <meta property="article:tag" content="模拟数据">
 <meta property="article:tag" content="JSON">
@@ -81,6 +81,8 @@
   </style>
 </noscript>
 
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="Acejy'Blog" type="application/atom+xml">
 </head>
 
@@ -232,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-07 02:17:09" itemprop="dateModified" datetime="2020-09-07T02:17:09+00:00">2020-09-07</time>
+                <time title="修改时间：2024-05-06 06:43:49" itemprop="dateModified" datetime="2024-05-06T06:43:49+00:00">2024-05-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -250,7 +252,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -272,79 +274,55 @@
         <h2 id="前端开发使用json-server模拟返回数据"><a href="#前端开发使用json-server模拟返回数据" class="headerlink" title="前端开发使用json-server模拟返回数据"></a>前端开发使用json-server模拟返回数据</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g json-server</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="创建json数据库"><a href="#创建json数据库" class="headerlink" title="创建json数据库"></a>创建json数据库</h3><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">&nbsp; <span class="attr">"posts"</span>: [</span><br><span class="line">&nbsp; &nbsp; { <span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"title"</span>: <span class="string">"json-server"</span>, <span class="attr">"author"</span>: <span class="string">"typicode"</span> }</span><br><span class="line">&nbsp; ],</span><br><span class="line">&nbsp; <span class="attr">"comments"</span>: [</span><br><span class="line">&nbsp; &nbsp; { <span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"body"</span>: <span class="string">"some comment1"</span>, <span class="attr">"author"</span>: { <span class="attr">"name"</span>: <span class="string">"typicode1"</span>, <span class="attr">"age"</span>: <span class="number">10</span> },<span class="attr">"postId"</span>: <span class="number">1</span> }</span><br><span class="line">&nbsp; ],</span><br><span class="line">&nbsp; <span class="attr">"profile"</span>: { <span class="attr">"name"</span>: <span class="string">"typicode"</span> }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="创建json数据库"><a href="#创建json数据库" class="headerlink" title="创建json数据库"></a>创建json数据库</h3><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">&nbsp; <span class="attr">"posts"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">&nbsp; &nbsp; <span class="punctuation">{</span> <span class="attr">"id"</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span> <span class="attr">"title"</span><span class="punctuation">:</span> <span class="string">"json-server"</span><span class="punctuation">,</span> <span class="attr">"author"</span><span class="punctuation">:</span> <span class="string">"typicode"</span> <span class="punctuation">}</span></span><br><span class="line">&nbsp; <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">&nbsp; <span class="attr">"comments"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">&nbsp; &nbsp; <span class="punctuation">{</span> <span class="attr">"id"</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span> <span class="attr">"body"</span><span class="punctuation">:</span> <span class="string">"some comment1"</span><span class="punctuation">,</span> <span class="attr">"author"</span><span class="punctuation">:</span> <span class="punctuation">{</span> <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"typicode1"</span><span class="punctuation">,</span> <span class="attr">"age"</span><span class="punctuation">:</span> <span class="number">10</span> <span class="punctuation">}</span><span class="punctuation">,</span><span class="attr">"postId"</span><span class="punctuation">:</span> <span class="number">1</span> <span class="punctuation">}</span></span><br><span class="line">&nbsp; <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">&nbsp; <span class="attr">"profile"</span><span class="punctuation">:</span> <span class="punctuation">{</span> <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"typicode"</span> <span class="punctuation">}</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="启动json-server服务"><a href="#启动json-server服务" class="headerlink" title="启动json-server服务"></a>启动json-server服务</h3><ol>
 <li><p>启动本地服务</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> json-server --w db.json</span></span><br><span class="line"></span><br><span class="line">  \{^_^}/ hi!</span><br><span class="line"></span><br><span class="line">  Loading db.json</span><br><span class="line">  Done</span><br><span class="line"></span><br><span class="line">  Resources</span><br><span class="line">  http://localhost:3000/todos</span><br><span class="line"></span><br><span class="line">  Home</span><br><span class="line">  http://localhost:3000</span><br><span class="line"></span><br><span class="line">  Type s + enter at any time to create a snapshot of the database</span><br><span class="line">  Watching...</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">json-server --w db.json</span></span><br><span class="line"></span><br><span class="line">  \{^_^}/ hi!</span><br><span class="line"></span><br><span class="line">  Loading db.json</span><br><span class="line">  Done</span><br><span class="line"></span><br><span class="line">  Resources</span><br><span class="line">  http://localhost:3000/todos</span><br><span class="line"></span><br><span class="line">  Home</span><br><span class="line">  http://localhost:3000</span><br><span class="line"></span><br><span class="line">  Type s + enter at any time to create a snapshot of the database</span><br><span class="line">  Watching...</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>启动远程服务</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> json-server http://example.com/file.json</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> json-server http://jsonplaceholder.typicode.com/db</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">json-server http://example.com/file.json</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">json-server http://jsonplaceholder.typicode.com/db</span></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>在package.json 中添加指令</p>
-<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"scripts": {</span><br><span class="line">  "json-server": "json-server --watch db.json",</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">"scripts"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"json-server"</span><span class="punctuation">:</span> <span class="string">"json-server --watch db.json"</span><span class="punctuation">,</span></span><br><span class="line">    ...</span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>设置服务端口</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">json-server --watch db.json --port 3004</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-</li>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">json-server --watch db.json --port 3004</span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
-<h3 id="配置environment-ts"><a href="#配置environment-ts" class="headerlink" title="配置environment.ts"></a>配置environment.ts</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">src/environments/environment.ts      # 开发环境</span><br><span class="line">src/environments/environment.prod.ts.  # 上线环境</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="配置environment-ts"><a href="#配置environment-ts" class="headerlink" title="配置environment.ts"></a>配置environment.ts</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">src/environments/environment.ts      # 开发环境</span><br><span class="line">src/environments/environment.prod.ts.  # 上线环境</span><br></pre></td></tr></tbody></table></figure>
 
 <p>apiUrl设置为json-server的服务地址</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> environment = {</span><br><span class="line">  production: <span class="literal">false</span>,</span><br><span class="line">  apiUrl: <span class="string">'http://localhost:3000'</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> environment = {</span><br><span class="line">  <span class="attr">production</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">apiUrl</span>: <span class="string">'http://localhost:3000'</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
 
 <p>也可直接使用json-server服务的URL</p>
-<h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> API_URL = environment.apiUrl;</span><br><span class="line">...</span><br><span class="line">http.get(API_URL + <span class="string">"posts"</span>)</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">API_URL</span> = environment.<span class="property">apiUrl</span>;</span><br><span class="line">...</span><br><span class="line">http.<span class="title function_">get</span>(<span class="variable constant_">API_URL</span> + <span class="string">"posts"</span>)</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="json-server提供的请求方式"><a href="#json-server提供的请求方式" class="headerlink" title="json-server提供的请求方式"></a>json-server提供的请求方式</h3><p>GET、POST、PUT、DELETE、PATCH、OPTIONS</p>
 <p>注：POST\PUT\PATCH请求需要设置请求头Content-type: application/json</p>
 <ol>
 <li><p>基础请求方式</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">GET    /posts</span><br><span class="line">GET    /posts/:id</span><br><span class="line">POST   /posts</span><br><span class="line">PUT    /posts/:id</span><br><span class="line">PATCH  /posts/:id</span><br><span class="line">DELETE /posts/:id</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">GET    /posts</span><br><span class="line">GET    /posts/:id</span><br><span class="line">POST   /posts</span><br><span class="line">PUT    /posts/:id</span><br><span class="line">PATCH  /posts/:id</span><br><span class="line">DELETE /posts/:id</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>获取json数据库中所有数据</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /db</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /db</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>带参数查找请求方式</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /posts?title=json-server&amp;author=typicode</span><br><span class="line">GET /posts?id=1&amp;postid=2</span><br><span class="line">GET /comments?author.name=typicode1  * 使用.访问下级属性值</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /posts?title=json-server&amp;author=typicode</span><br><span class="line">GET /posts?id=1&amp;postid=2</span><br><span class="line">GET /comments?author.name=typicode1  * 使用.访问下级属性值</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>页面分页链接请求（first、last、prev、next）</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /posts?_page=7</span><br><span class="line">GET /posts?_page=7&amp;_limit=20</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /posts?_page=7</span><br><span class="line">GET /posts?_page=7&amp;_limit=20</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>升降序排列请求</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /users?_sort=id&amp;_order=asc</span><br><span class="line">GET /users?_sort=name&amp;_order=asc</span><br><span class="line">多条件升降序： GET /posts?_sort=user,views&amp;_order=desc,asc</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /users?_sort=id&amp;_order=asc</span><br><span class="line">GET /users?_sort=name&amp;_order=asc</span><br><span class="line">多条件升降序： GET /posts?_sort=user,views&amp;_order=desc,asc</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>范围查询数据</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /users?_start=2&amp;_end=20 （类似于substring）</span><br><span class="line">GET /users?_start=2&amp;_limit=3    （类似于substr）</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /users?_start=2&amp;_end=20 （类似于substring）</span><br><span class="line">GET /users?_start=2&amp;_limit=3    （类似于substr）</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>根据文字模糊匹配查询数据</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /users?q=情感</span><br></pre></td></tr></tbody></table></figure>
-
-</li>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /users?q=情感</span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
 <p>另外json-server支持自定义路由等其他功能，详情请参照<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/json-server">官方文档</a></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
     </div>
 
     
@@ -550,7 +528,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -559,7 +537,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">11k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
