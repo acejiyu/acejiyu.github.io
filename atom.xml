@@ -6,7 +6,7 @@
   <link href="https://acejiyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://acejiyu.github.io/"/>
-  <updated>2024-05-06T07:15:02.661Z</updated>
+  <updated>2024-05-06T07:57:07.594Z</updated>
   <id>https://acejiyu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
     <id>https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</id>
     <published>2019-09-09T09:37:22.000Z</published>
-    <updated>2024-05-06T07:15:02.661Z</updated>
+    <updated>2024-05-06T07:57:07.594Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。&lt;br&gt;Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料&lt;/p&gt;
@@ -43,7 +43,7 @@
     <link href="https://acejiyu.github.io/2019/03/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/"/>
     <id>https://acejiyu.github.io/2019/03/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/</id>
     <published>2019-03-18T20:06:09.000Z</published>
-    <updated>2024-05-06T07:15:02.661Z</updated>
+    <updated>2024-05-06T07:57:07.594Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;前端开发使用json-server模拟返回数据&quot;&gt;&lt;a href=&quot;#前端开发使用json-server模拟返回数据&quot; class=&quot;headerlink&quot; title=&quot;前端开发使用json-server模拟返回数据&quot;&gt;&lt;/a&gt;前端开发使用json-server模拟返回数据&lt;/h2&gt;&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;在刚开始的Angular开发中，并没有完全做到前后端分离式开发，这样一来导致前后端的开发进度互相牵绊，影响项目顺利进行，使用Postman工具的mock功能，感觉配置起来相对有点麻烦，后来发现了json-server，配置起来简单一些，功能上也基本满足需求，就简单的了解了一下，并将其应用到项目中。&lt;/p&gt;</summary>
@@ -66,7 +66,7 @@
     <link href="https://acejiyu.github.io/2019/03/14/%E5%85%B3%E4%BA%8EJava%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/"/>
     <id>https://acejiyu.github.io/2019/03/14/%E5%85%B3%E4%BA%8EJava%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/</id>
     <published>2019-03-14T22:45:02.000Z</published>
-    <updated>2024-05-06T07:15:02.661Z</updated>
+    <updated>2024-05-06T07:57:07.594Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;敲了几行关于字符串拼接代码，看了下字节码，发现跟Thinking in Java中描述的并不相同，随即查了一下资料，发现jdk9之后，对字符串的处理方式做出了一些优化。&lt;/p&gt;
@@ -88,7 +88,7 @@
     <link href="https://acejiyu.github.io/2019/03/14/%E7%94%B1Java-String-intern%E5%BC%95%E7%94%B3%E7%9A%84%E6%80%9D%E8%80%83/"/>
     <id>https://acejiyu.github.io/2019/03/14/%E7%94%B1Java-String-intern%E5%BC%95%E7%94%B3%E7%9A%84%E6%80%9D%E8%80%83/</id>
     <published>2019-03-14T22:14:49.000Z</published>
-    <updated>2024-05-06T07:15:02.661Z</updated>
+    <updated>2024-05-06T07:57:07.594Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;闲来翻翻API文档，看到了String类的intern()方法，稍加研究，引发了Java对字符串处理的思考。由此看来，对String类的了解还尚不透彻。&lt;/p&gt;
@@ -110,7 +110,7 @@
     <link href="https://acejiyu.github.io/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/"/>
     <id>https://acejiyu.github.io/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/</id>
     <published>2019-01-16T21:04:52.000Z</published>
-    <updated>2024-05-06T07:15:02.657Z</updated>
+    <updated>2024-05-06T07:57:07.590Z</updated>
     
     
     <summary type="html">&lt;p&gt;postgres 数据库实现定时任务的方式之一是使用pgAgent插件，下面是pgAgent在Windows平台的配置步骤&lt;/p&gt;
