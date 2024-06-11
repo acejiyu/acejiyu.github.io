@@ -1,6 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Git 备忘录</title>
+    <url>/2024/06/11/Git%20%E5%A4%87%E5%BF%98%E5%BD%95/</url>
+    <content><![CDATA[<p>Git 是一种开源的分布式版本控制系统，便于在你的笔记本或台式电脑上进行 GitHub 活动。此备忘单总结了常用的 Git 命令行指令，便于快速参考。</p>
+<h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><p>GitHub 提供桌面客户端，包含图形用户界面用于最常见的仓库操作，并自动更新命令行版本的 Git 以应对高级场景。</p>
+<ul>
+<li><strong>GitHub for Windows</strong> <a href="https://windows.github.com/">htps://windows.github.com</a></li>
+<li><strong>GitHub for Mac</strong> <a href="https://mac.github.com/">htps://mac.github.com</a></li>
+</ul>
+<p>Linux 和 POSIX 系统的 Git 发行版可在 Git SCM 官方网站获取。</p>
+<ul>
+<li><strong>Git for All Platforms</strong> <a href="http://git-scm.com/">htp://git-scm.com</a></li>
+</ul>
+<h3 id="配置工具"><a href="#配置工具" class="headerlink" title="配置工具"></a>配置工具</h3><p><strong>配置所有本地仓库的用户信息</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"[name]"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>设置提交事务时要附加的用户名。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git config --global user.email <span class="string">"[email address]"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>设置提交事务时要附加的邮箱地址。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git config --global color.ui auto</span><br></pre></td></tr></tbody></table></figure>
+
+<p>启用命令行输出的颜色高亮。</p>
+<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p><strong>启动一个新仓库或从现有URL获取一个仓库</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git init [project-name]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建一个具有指定名称的新本地仓库。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [url]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下载一个项目及其整个版本历史。</p>
+<h3 id="进行更改"><a href="#进行更改" class="headerlink" title="进行更改"></a>进行更改</h3><p><strong>查看编辑并创建一个提交事务</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出所有新文件或修改过的文件，准备提交。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git add [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>对文件进行快照，以准备进行版本控制。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git reset [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>取消对文件的暂存，但保留其内容。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git diff</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示尚未暂存的文件差异。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git diff --staged</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示暂存区域与上次提交之间的文件差异。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"[descriptive message]"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>将文件快照永久记录在版本历史中。</p>
+<h3 id="分组更改"><a href="#分组更改" class="headerlink" title="分组更改"></a>分组更改</h3><p><strong>命名一系列提交并合并完成的工作</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出当前仓库中的所有本地分支。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch [branch-name]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建一个新分支。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout [branch-name]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>切换到指定分支并更新工作目录。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git merge [branch]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>将指定分支的历史合并到当前分支。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -d [branch-name]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>删除指定分支。</p>
+<h3 id="重构文件名"><a href="#重构文件名" class="headerlink" title="重构文件名"></a>重构文件名</h3><p><strong>重新定位和删除版本控制的文件</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>从工作目录中删除该文件并暂存删除。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> --cached [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>将文件从版本控制中移除，但保留本地文件。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">mv</span> [file-original] [file-renamed]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>更改文件名并准备提交。</p>
+<h3 id="抑制跟踪"><a href="#抑制跟踪" class="headerlink" title="抑制跟踪"></a>抑制跟踪</h3><p><strong>排除临时文件和路径</strong></p>
+<ul>
+<li><p><strong>.gitignore 文件</strong> 抑制对匹配指定模式的文件和路径的意外版本控制。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">plaintext复制代码*.log</span><br><span class="line">build/</span><br><span class="line">temp-*</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出项目中所有忽略的文件。</p>
+</li>
+<li><p><strong>排除临时文件和路径</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git ls-files --other --ignored --exclude-standard</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出项目中所有忽略的文件。</p>
+</li>
+</ul>
+<h3 id="保存片段"><a href="#保存片段" class="headerlink" title="保存片段"></a>保存片段</h3><p><strong>搁置并恢复不完整的更改</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git stash</span><br></pre></td></tr></tbody></table></figure>
+
+<p>暂时存储所有修改过的跟踪文件。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git stash list</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出所有暂存的更改集。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git stash pop</span><br></pre></td></tr></tbody></table></figure>
+
+<p>恢复最近暂存的文件。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git stash drop</span><br></pre></td></tr></tbody></table></figure>
+
+<p>丢弃最近暂存的更改集。</p>
+<h3 id="查看历史"><a href="#查看历史" class="headerlink" title="查看历史"></a>查看历史</h3><p><strong>浏览和检查项目文件的演变</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出当前分支的版本历史。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --follow [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出文件的版本历史，包括重命名。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git diff [first-branch]...[second-branch]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示两个分支之间的内容差异。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git show [commit]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出指定提交的元数据和内容更改。</p>
+<h3 id="重做提交"><a href="#重做提交" class="headerlink" title="重做提交"></a>重做提交</h3><p><strong>擦除错误并重写历史</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git reset [commit]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>撤销 [commit] 之后的所有提交，保留更改。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git reset --hard [commit]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>丢弃所有历史和更改，回到指定提交。</p>
+<h3 id="同步更改"><a href="#同步更改" class="headerlink" title="同步更改"></a>同步更改</h3><p><strong>注册一个仓库书签并交换版本历史</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git fetch [bookmark]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下载书签仓库的所有历史记录。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git merge [bookmark]/[branch]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>将书签分支合并到当前本地分支。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git push [<span class="built_in">alias</span>] [branch]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上传所有本地分支提交到 GitHub。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下载书签历史并合并更改。</p>
+]]></content>
+      <categories>
+        <category>VSC</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Postgres 配置调度任务</title>
     <url>/2019/01/16/Postgres-%E9%85%8D%E7%BD%AE%E8%B0%83%E5%BA%A6%E4%BB%BB%E5%8A%A1/</url>
     <content><![CDATA[<p>postgres 数据库实现定时任务的方式之一是使用pgAgent插件，下面是pgAgent在Windows平台的配置步骤</p>

@@ -22,21 +22,20 @@
     var CONFIG = {"hostname":"acejiyu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料 npm配置">
+  <meta name="description" content="Git 是一种开源的分布式版本控制系统，便于在你的笔记本或台式电脑上进行 GitHub 活动。此备忘单总结了常用的 Git 命令行指令，便于快速参考。 安装 GitGitHub 提供桌面客户端，包含图形用户界面用于最常见的仓库操作，并自动更新命令行版本的 Git 以应对高级场景。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="私有Repository的配置方法">
-<meta property="og:url" content="https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="Git 备忘录">
+<meta property="og:url" content="https://acejiyu.github.io/2024/06/11/Git%20%E5%A4%87%E5%BF%98%E5%BD%95/index.html">
 <meta property="og:site_name" content="Acejy&#39;Blog">
-<meta property="og:description" content="前言以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料 npm配置">
+<meta property="og:description" content="Git 是一种开源的分布式版本控制系统，便于在你的笔记本或台式电脑上进行 GitHub 活动。此备忘单总结了常用的 Git 命令行指令，便于快速参考。 安装 GitGitHub 提供桌面客户端，包含图形用户界面用于最常见的仓库操作，并自动更新命令行版本的 Git 以应对高级场景。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-09-09T09:37:22.000Z">
-<meta property="article:modified_time" content="2024-06-11T03:10:43.116Z">
+<meta property="article:published_time" content="2024-06-11T11:06:21.000Z">
+<meta property="article:modified_time" content="2024-06-11T03:10:43.112Z">
 <meta property="article:author" content="Ace Jiyu">
-<meta property="article:tag" content="私有仓库">
-<meta property="article:tag" content="Repository">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">
+<link rel="canonical" href="https://acejiyu.github.io/2024/06/11/Git%20%E5%A4%87%E5%BF%98%E5%BD%95/">
 
 
 <script id="page-configurations">
@@ -49,7 +48,7 @@
   };
 </script>
 
-  <title>私有Repository的配置方法 | Acejy'Blog</title>
+  <title>Git 备忘录 | Acejy'Blog</title>
   
 
 
@@ -203,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://acejiyu.github.io/2024/06/11/Git%20%E5%A4%87%E5%BF%98%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -216,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          私有Repository的配置方法
+          Git 备忘录
         </h1>
 
         <div class="post-meta">
@@ -225,23 +224,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-09-09 09:37:22" itemprop="dateCreated datePublished" datetime="2019-09-09T09:37:22+00:00">2019-09-09</time>
+              <time title="创建时间：2024-06-11 11:06:21 / 修改时间：03:10:43" itemprop="dateCreated datePublished" datetime="2024-06-11T11:06:21+00:00">2024-06-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-11 03:10:43" itemprop="dateModified" datetime="2024-06-11T03:10:43+00:00">2024-06-11</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/nexus/" itemprop="url" rel="index"><span itemprop="name">nexus</span></a>
+                  <a href="/categories/VSC/" itemprop="url" rel="index"><span itemprop="name">VSC</span></a>
                 </span>
             </span>
 
@@ -251,7 +244,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.2k</span>
+              <span>1.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -270,41 +263,137 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>以下配置方法适用于使用Nexus3.x搭建的私用仓库，包括npm、maven、bower本地使用时的配置方法。<br>Nexus3.x的下载和安装以及Nexus3.x服务的配置请参考相关资料</p>
-<h3 id="npm配置"><a href="#npm配置" class="headerlink" title="npm配置"></a>npm配置</h3><ol>
-<li><p>电脑已经安装node.js，打开cmd控制台，执行以下指令</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">https://registry.npmjs.org/</span></span><br></pre></td></tr></tbody></table></figure>
+        <p>Git 是一种开源的分布式版本控制系统，便于在你的笔记本或台式电脑上进行 GitHub 活动。此备忘单总结了常用的 Git 命令行指令，便于快速参考。</p>
+<h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><p>GitHub 提供桌面客户端，包含图形用户界面用于最常见的仓库操作，并自动更新命令行版本的 Git 以应对高级场景。</p>
+<ul>
+<li><strong>GitHub for Windows</strong> <a target="_blank" rel="noopener" href="https://windows.github.com/">htps://windows.github.com</a></li>
+<li><strong>GitHub for Mac</strong> <a target="_blank" rel="noopener" href="https://mac.github.com/">htps://mac.github.com</a></li>
+</ul>
+<p>Linux 和 POSIX 系统的 Git 发行版可在 Git SCM 官方网站获取。</p>
+<ul>
+<li><strong>Git for All Platforms</strong> <a target="_blank" rel="noopener" href="http://git-scm.com/">htp://git-scm.com</a></li>
+</ul>
+<h3 id="配置工具"><a href="#配置工具" class="headerlink" title="配置工具"></a>配置工具</h3><p><strong>配置所有本地仓库的用户信息</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"[name]"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>设置提交事务时要附加的用户名。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.email <span class="string">"[email address]"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>设置提交事务时要附加的邮箱地址。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global color.ui auto</span><br></pre></td></tr></tbody></table></figure>
+
+<p>启用命令行输出的颜色高亮。</p>
+<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p><strong>启动一个新仓库或从现有URL获取一个仓库</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init [project-name]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建一个具有指定名称的新本地仓库。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [url]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下载一个项目及其整个版本历史。</p>
+<h3 id="进行更改"><a href="#进行更改" class="headerlink" title="进行更改"></a>进行更改</h3><p><strong>查看编辑并创建一个提交事务</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出所有新文件或修改过的文件，准备提交。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>对文件进行快照，以准备进行版本控制。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>取消对文件的暂存，但保留其内容。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示尚未暂存的文件差异。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff --staged</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示暂存区域与上次提交之间的文件差异。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"[descriptive message]"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>将文件快照永久记录在版本历史中。</p>
+<h3 id="分组更改"><a href="#分组更改" class="headerlink" title="分组更改"></a>分组更改</h3><p><strong>命名一系列提交并合并完成的工作</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出当前仓库中的所有本地分支。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch [branch-name]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建一个新分支。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout [branch-name]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>切换到指定分支并更新工作目录。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge [branch]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>将指定分支的历史合并到当前分支。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d [branch-name]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>删除指定分支。</p>
+<h3 id="重构文件名"><a href="#重构文件名" class="headerlink" title="重构文件名"></a>重构文件名</h3><p><strong>重新定位和删除版本控制的文件</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>从工作目录中删除该文件并暂存删除。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> --cached [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>将文件从版本控制中移除，但保留本地文件。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">mv</span> [file-original] [file-renamed]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>更改文件名并准备提交。</p>
+<h3 id="抑制跟踪"><a href="#抑制跟踪" class="headerlink" title="抑制跟踪"></a>抑制跟踪</h3><p><strong>排除临时文件和路径</strong></p>
+<ul>
+<li><p><strong>.gitignore 文件</strong> 抑制对匹配指定模式的文件和路径的意外版本控制。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plaintext复制代码*.log</span><br><span class="line">build/</span><br><span class="line">temp-*</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出项目中所有忽略的文件。</p>
 </li>
-<li><p>执行以下指令，将仓库地址切换为本地仓库</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span><br></pre></td></tr></tbody></table></figure>
+<li><p><strong>排除临时文件和路径</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git ls-files --other --ignored --exclude-standard</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出项目中所有忽略的文件。</p>
 </li>
-<li><p>执行以下命令，确认仓库切换成功</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">返回当前使用的仓库地址：</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">http://&lt;host&gt;:&lt;port&gt;/repository/npm-group/</span></span><br></pre></td></tr></tbody></table></figure></li>
-</ol>
-<h3 id="maven配置"><a href="#maven配置" class="headerlink" title="maven配置"></a>maven配置</h3><ol>
-<li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\.m2</code></p>
-</li>
-<li><p>在该目录下创建<code>setting.xml</code>文件，文件内容如下：<br> <a href="settings.zip">点击下载</a> </p>
-<figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--This sends everything else to /public --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://<span class="tag">&lt;<span class="name">host</span>&gt;</span>:<span class="tag">&lt;<span class="name">port</span>&gt;</span>/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--Enable snapshots for the built in central repo to direct --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--all requests to nexus via the mirror --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>central<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://central<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">releases</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>central<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://central<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">releases</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span><span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span><span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">activeProfiles</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--make the profile active all the time --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">activeProfile</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">activeProfile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">activeProfiles</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>打开ecilpse，选择以下设置选项：</p>
-<p>Preferences&gt;Maven&gt;User Settings&gt;User Settings&gt;Browser…</p>
-<p>选择&lt;1&gt;中创建的文件，点击<code>Update Settings</code>按钮</p>
-</li>
-<li><p>点击<code>Apply and Close</code>保存退出</p>
-</li>
-<li><p>选择maven项目，<code>Alt+F5</code>确认maven仓库切换成功</p>
-</li>
-</ol>
-<h3 id="bower配置"><a href="#bower配置" class="headerlink" title="bower配置"></a>bower配置</h3><ol>
-<li><p>执行以下命令，安装bower的nexus3依赖组件</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i bower-nexus3-resolver -g</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>访问文件夹目录：<code>C:\Users\&lt;user_name&gt;\</code></p>
-</li>
-<li><p>在该目录下创建<code>.bowerrc</code>文件，文件内容如下：<br> <a href="bowerrc.zip">点击下载</a> </p>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   <span class="punctuation">{</span></span><br><span class="line">     <span class="attr">"registry"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">       <span class="attr">"search"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">         <span class="string">"http://&lt;host&gt;:&lt;port&gt;/repository/bower-group/"</span></span><br><span class="line">       <span class="punctuation">]</span></span><br><span class="line">     <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">"resolvers"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">       <span class="string">"bower-nexus3-resolver"</span></span><br><span class="line">     <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure></li>
-</ol>
+</ul>
+<h3 id="保存片段"><a href="#保存片段" class="headerlink" title="保存片段"></a>保存片段</h3><p><strong>搁置并恢复不完整的更改</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash</span><br></pre></td></tr></tbody></table></figure>
+
+<p>暂时存储所有修改过的跟踪文件。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash list</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出所有暂存的更改集。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash pop</span><br></pre></td></tr></tbody></table></figure>
+
+<p>恢复最近暂存的文件。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash drop</span><br></pre></td></tr></tbody></table></figure>
+
+<p>丢弃最近暂存的更改集。</p>
+<h3 id="查看历史"><a href="#查看历史" class="headerlink" title="查看历史"></a>查看历史</h3><p><strong>浏览和检查项目文件的演变</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出当前分支的版本历史。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --follow [file]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列出文件的版本历史，包括重命名。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff [first-branch]...[second-branch]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示两个分支之间的内容差异。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git show [commit]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出指定提交的元数据和内容更改。</p>
+<h3 id="重做提交"><a href="#重做提交" class="headerlink" title="重做提交"></a>重做提交</h3><p><strong>擦除错误并重写历史</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset [commit]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>撤销 [commit] 之后的所有提交，保留更改。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard [commit]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>丢弃所有历史和更改，回到指定提交。</p>
+<h3 id="同步更改"><a href="#同步更改" class="headerlink" title="同步更改"></a>同步更改</h3><p><strong>注册一个仓库书签并交换版本历史</strong></p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch [bookmark]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下载书签仓库的所有历史记录。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge [bookmark]/[branch]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>将书签分支合并到当前本地分支。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push [<span class="built_in">alias</span>] [branch]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上传所有本地分支提交到 GitHub。</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下载书签历史并合并更改。</p>
 
     </div>
 
@@ -341,8 +430,8 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
 
-    <a href="https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/" title="私有Repository的配置方法">https://acejiyu.github.io/2019/09/09/私有Repository的配置方法/</a>
-    <a href="https://acejiyu.github.io/2019/09/09/%E7%A7%81%E6%9C%89Repository%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/" title="私有Repository的配置方法">https://acejiyu.github.io/私有Repository的配置方法</a>
+    <a href="https://acejiyu.github.io/2024/06/11/Git%20%E5%A4%87%E5%BF%98%E5%BD%95/" title="Git 备忘录">https://acejiyu.github.io/2024/06/11/Git 备忘录/</a>
+    <a href="https://acejiyu.github.io/2024/06/11/Git%20%E5%A4%87%E5%BF%98%E5%BD%95/" title="Git 备忘录">https://acejiyu.github.io/Git 备忘录</a>
 
   </li>
   <li class="post-copyright-license">
@@ -365,8 +454,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/" rel="tag"><i class="fa fa-tag"></i> 私有仓库</a>
-              <a href="/tags/Repository/" rel="tag"><i class="fa fa-tag"></i> Repository</a>
+              <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
           </div>
 
         
@@ -375,13 +463,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/03/18/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8json-server%E6%A8%A1%E6%8B%9F%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/" rel="prev" title="前端开发使用json-server模拟返回数据">
-      <i class="fa fa-chevron-left"></i> 前端开发使用json-server模拟返回数据
+    <a href="/2024/05/08/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" rel="prev" title="软件开发流程">
+      <i class="fa fa-chevron-left"></i> 软件开发流程
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2024/05/08/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" rel="next" title="软件开发流程">
-      软件开发流程 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -440,7 +525,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">npm配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maven%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">maven配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bower%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">bower配置</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Git"><span class="nav-number">1.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">配置工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E6%9B%B4%E6%94%B9"><span class="nav-number">4.</span> <span class="nav-text">进行更改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E6%9B%B4%E6%94%B9"><span class="nav-number">5.</span> <span class="nav-text">分组更改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%9E%84%E6%96%87%E4%BB%B6%E5%90%8D"><span class="nav-number">6.</span> <span class="nav-text">重构文件名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%91%E5%88%B6%E8%B7%9F%E8%B8%AA"><span class="nav-number">7.</span> <span class="nav-text">抑制跟踪</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E7%89%87%E6%AE%B5"><span class="nav-number">8.</span> <span class="nav-text">保存片段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2"><span class="nav-number">9.</span> <span class="nav-text">查看历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%81%9A%E6%8F%90%E4%BA%A4"><span class="nav-number">10.</span> <span class="nav-text">重做提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E6%9B%B4%E6%94%B9"><span class="nav-number">11.</span> <span class="nav-text">同步更改</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
