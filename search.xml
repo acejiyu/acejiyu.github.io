@@ -78,7 +78,7 @@
 <h3 id="抑制跟踪"><a href="#抑制跟踪" class="headerlink" title="抑制跟踪"></a>抑制跟踪</h3><p><strong>排除临时文件和路径</strong></p>
 <ul>
 <li><p><strong>.gitignore 文件</strong> 抑制对匹配指定模式的文件和路径的意外版本控制。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">plaintext复制代码*.log</span><br><span class="line">build/</span><br><span class="line">temp-*</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">*.log</span><br><span class="line">build/</span><br><span class="line">temp-*</span><br></pre></td></tr></tbody></table></figure>
 
 <p>列出项目中所有忽略的文件。</p>
 </li>
